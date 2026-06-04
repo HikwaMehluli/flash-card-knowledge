@@ -57,7 +57,9 @@ function displayCard() {
 
 	cardDiv.innerHTML = `
 		<div class="card-inner">
-			<div class="card-front">${card.question}</div>
+			<div class="card-front">
+				${card.question}
+			</div>
 			<div class="card-back">${card.answer}</div>
 		</div>
 	`;
@@ -119,7 +121,7 @@ function markCorrect() {
 	showProcessing();
 	
 	// Auto-advance after delay
-	setTimeout(nextCard, 1500);
+	setTimeout(nextCard, 3000);
 }
 
 // Mark answer as incorrect
@@ -134,7 +136,7 @@ function markIncorrect() {
 	showProcessing();
 	
 	// Auto-advance after delay
-	setTimeout(nextCard, 1500);
+	setTimeout(nextCard, 3000);
 }
 
 // Apply processing animation with revolving border

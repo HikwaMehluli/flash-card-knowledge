@@ -5,7 +5,6 @@
 	--background-color: #ffffff;
 	--grey-color: #f1f1f1;
 	--text-primary: #1e3b58;
-	--border-color: #ecf0f1;
 	--correct-color: #148e47;
 	--incorrect-color: #d34a3a;
 	--transition: all 0.3s ease;
@@ -18,7 +17,6 @@ body.dark-mode {
 	--background-color: #0a131d;
 	--grey-color: #2d2d2d;
 	--text-primary: #ecf0f1;
-	--border-color: #34495e;
 }
 
 /* Reset and Base Styles */
@@ -125,8 +123,9 @@ body.dark-mode .theme-toggle button .icon {
 
 /* Main Content */
 .main-content {
-	padding: 40px;
-	/* background-color: var(--background-color); */
+	margin: 0 auto;
+	padding: 30px 0 0 0;
+	max-width: 95%;
 }
 
 .card-info {
@@ -173,30 +172,25 @@ body.dark-mode .processing-status {
 .flashcard-container {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
 	min-height: 300px;
 	align-items: center;
 }
 
 .card {
-	width: 500px;
-	height: 300px;
+	width: 100%;
+	height: 300px; /* Match .flashcard-container */
+	max-width: 500px;
+	margin-top: 20px;
 	perspective: 1000px;
 	cursor: pointer;
-	flex-shrink: 0;
+	/* flex-shrink: 0; */
 }
 
 @media (max-width: 768px) {
 	.card {
 		width: 350px;
 		height: 250px;
-	}
-}
-
-@media (max-width: 480px) {
-	.card {
-		width: 280px;
-		height: 200px;
 	}
 }
 
@@ -226,7 +220,6 @@ body.dark-mode .processing-status {
 	text-align: center;
 	font-size: 1.2em;
 	line-height: 1.6;
-	border: 5px solid var(--border-color);
 	transition: var(--transition);
 }
 
@@ -243,9 +236,9 @@ body.dark-mode .processing-status {
 }
 
 /* Card State - Processing Animation */
-.card.processing .card-front,
+/* .card.processing .card-front, */
 .card.processing .card-back {
-	animation: revolvingBorder 2s linear infinite;
+	animation: cardProcessingAnimation 2s linear infinite;
 }
 
 /* Action Buttons */
@@ -417,18 +410,18 @@ body.dark-mode .processing-status {
 	}
 }
 
-@keyframes revolvingBorder {
+@keyframes cardProcessingAnimation {
 	0% {
-		border-color: var(--correct-color);
-		box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
+		background-color: var(--grey-color);
+		color: var(--grey-color);
 	}
 	50% {
-		border-color: var(--incorrect-color);
-		box-shadow: 0 4px 16px rgba(231, 76, 60, 0.3);
+		background-color: #cad2d4;
+		color: #cad2d4;
 	}
 	100% {
-		border-color: var(--correct-color);
-		box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
+		background-color: var(--grey-color);
+		color: var(--grey-color);
 	}
 }
 
