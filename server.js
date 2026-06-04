@@ -1,90 +1,118 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
+const API_DIR = path.join(__dirname, 'api');
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
 
-// Flashcards data
-const flashcards = [
-    {
-        "id": 1,
-        "question": "What does the Zimbabwe Bird on the national flag represent?",
-        "answer": "The Zimbabwe Bird represents the country's rich history and national identity, originating from soapstone carvings found at Great Zimbabwe."
-    },
-    {
-        "id": 2,
-        "question": "What is the historical significance of the Unity Accord signed on December 22, 1987?",
-        "answer": "The Unity Accord merged Zimbabwe's two primary liberation political parties, ZANU and ZAPU, to form ZANU-PF, successfully ending years of internal civil conflict."
-    },
-    {
-        "id": 3,
-        "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
-        "answer": "Robert Gabriel Mugabe became executive president in 1987 and ruled the country for three decades until November 2017."
-    },
-    {
-        "id": 4,
-        "question": "Which massive medieval stone city serves as a national monument and gave Zimbabwe its modern name?",
-        "answer": "Great Zimbabwe, built between the 11th and 15th centuries by the Shona people, is a UNESCO World Heritage site from which the nation derives its name."
-    },
-    {
-        "id": 5,
-        "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
-        "answer": "The Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
-    },
-    {
-        "id": 6,
-        "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
-        "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence in 1980."
-    },
-    {
-        "id": 7,
-        "question": "Which natural wonder, shared by Zimbabwe and Zambia, is the world's largest curtain of falling water?",
-        "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a major national monument and natural world wonder."
-    },
-    {
-        "id": 8,
-        "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
-        "answer": "The Great Enclosure. It features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
-    },
-    {
-        "id": 9,
-        "question": "What do the red stripes on the Zimbabwean national flag represent?",
-        "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Chimurenga)."
-    },
-    {
-        "id": 10,
-        "question": "How many official languages does Zimbabwe recognize in its national constitution?",
-        "answer": "16 official languages. Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
+// Helper to get available categories
+const getCategories = () => {
+    try {
+        const files = fs.readdirSync(API_DIR);
+        return files
+            .filter(file => file.endsWith('_facts.json'))
+            .map(file => {
+                const filePath = path.join(API_DIR, file);
+                const rawData = fs.readFileSync(filePath, 'utf8');
+                const data = JSON.parse(rawData);
+                return {
+                    id: file.replace('_facts.json', ''),
+                    name: data.topic || file.replace('_facts.json', '').split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
+                };
+            });
+    } catch (error) {
+        console.error('Error reading API directory:', error);
+        return [];
     }
-];
+};
 
-// API endpoint to get all flashcards
-app.get('/api/flashcards', (req, res) => {
+// API endpoint to get all categories
+app.get('/api/categories', (req, res) => {
+    const categories = getCategories();
     res.json({
         success: true,
-        data: flashcards,
-        total: flashcards.length
+        data: categories
     });
 });
 
-// API endpoint to get a single flashcard
-app.get('/api/flashcards/:id', (req, res) => {
-    const card = flashcards.find(c => c.id === parseInt(req.params.id));
-    if (card) {
+// API endpoint to get flashcards for a specific category
+app.get('/api/flashcards', (req, res) => {
+    const category = req.query.category || 'zimbabwe';
+    const filePath = path.join(API_DIR, `${category}_facts.json`);
+
+    try {
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({
+                success: false,
+                message: `Category '${category}' not found`
+            });
+        }
+
+        const rawData = fs.readFileSync(filePath, 'utf8');
+        const data = JSON.parse(rawData);
+
         res.json({
             success: true,
-            data: card
+            data: data.flashcards,
+            metadata: {
+                name: data.flashCardName,
+                description: data.description,
+                dateCreated: data.dateCreated,
+                dateUpdated: data.dateUpdated
+            },
+            total: data.flashcards.length,
+            category: category
         });
-    } else {
-        res.status(404).json({
+    } catch (error) {
+        console.error(`Error reading flashcards for ${category}:`, error);
+        res.status(500).json({
             success: false,
-            message: 'Flashcard not found'
+            message: 'Internal server error'
+        });
+    }
+});
+
+// API endpoint to get a single flashcard from a specific category
+app.get('/api/flashcards/:id', (req, res) => {
+    const category = req.query.category || 'zimbabwe';
+    const filePath = path.join(API_DIR, `${category}_facts.json`);
+
+    try {
+        if (!fs.existsSync(filePath)) {
+            return res.status(404).json({
+                success: false,
+                message: `Category '${category}' not found`
+            });
+        }
+
+        const rawData = fs.readFileSync(filePath, 'utf8');
+        const data = JSON.parse(rawData);
+        const card = data.flashcards.find(c => c.id === parseInt(req.params.id));
+
+        if (card) {
+            res.json({
+                success: true,
+                data: card
+            });
+        } else {
+            res.status(404).json({
+                success: false,
+                message: 'Flashcard not found'
+            });
+        }
+    } catch (error) {
+        console.error(`Error reading flashcard ${req.params.id} for ${category}:`, error);
+        res.status(500).json({
+            success: false,
+            message: 'Internal server error'
         });
     }
 });

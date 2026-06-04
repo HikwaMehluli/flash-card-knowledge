@@ -1,17 +1,22 @@
-// Game state
 let gameState = {
 	flashcards: [],
+	categories: [],
+	selectedCategory: 'zimbabwe',
 	currentIndex: 0,
 	correctCount: 0,
 	totalCards: 0,
 	answered: false,
 	gameStarted: false,
-	apiUrl: 'http://localhost:3000/api/flashcards'
+	baseApiUrl: '/api'
 };
 
 // DOM elements
 const disclaimerModal = document.getElementById("disclaimer-modal");
 const startBtn = document.getElementById("start-btn");
+const categorySelect = document.getElementById("category-select");
+const progressBar = document.getElementById("progress-bar");
+const headerTitle = document.getElementById("header-title");
+const headerDescription = document.getElementById("header-description");
 const gameArea = document.getElementById("game-area");
 const container = document.getElementById("flashcard-container");
 const correctBtn = document.getElementById("correct-btn");
@@ -21,27 +26,72 @@ const currentCardDisplay = document.getElementById("current-card");
 const processingStatus = document.getElementById("processing-status");
 const gameResultsDiv = document.getElementById("game-results");
 
-// Fetch flashcards from API
+// Fetch categories from API
+async function loadCategories() {
+	try {
+		const response = await fetch(`${gameState.baseApiUrl}/categories`);
+		if (!response.ok) throw new Error('Failed to fetch categories');
+		
+		const data = await response.json();
+		gameState.categories = data.data;
+		
+		populateCategorySelect();
+	} catch (error) {
+		console.error('Error loading categories:', error);
+	}
+}
+
+// Populate category dropdown
+function populateCategorySelect() {
+	categorySelect.innerHTML = gameState.categories.map(cat => 
+		`<option value="${cat.id}" ${cat.id === gameState.selectedCategory ? 'selected' : ''}>${cat.name}</option>`
+	).join('');
+}
+
+// Fetch flashcards from API based on selected category
 async function loadFlashcards() {
 	try {
-		const response = await fetch(gameState.apiUrl);
+		const response = await fetch(`${gameState.baseApiUrl}/flashcards?category=${gameState.selectedCategory}`);
 		if (!response.ok) throw new Error('Failed to fetch flashcards');
 		
 		const data = await response.json();
-		gameState.flashcards = data.data;
-		gameState.totalCards = data.total;
+		
+		// Randomize the flashcards
+		let allCards = data.data;
+		gameState.flashcards = shuffleArray(allCards).slice(0, 10);
+		gameState.totalCards = gameState.flashcards.length;
+		
+		// Update header with metadata from API
+		if (data.metadata) {
+			headerTitle.textContent = data.metadata.name;
+			headerDescription.textContent = data.metadata.description;
+		}
+		
+		displayCard();
 	} catch (error) {
 		console.error('Error loading flashcards:', error);
-		container.innerHTML = `<p class="error">Error loading flashcards. Make sure the backend server is running on port 3000.</p>`;
+		container.innerHTML = `<p class="error">Error loading flashcards. Make sure the backend server is running.</p>`;
 	}
+}
+
+// Utility to shuffle array (Fisher-Yates)
+function shuffleArray(array) {
+	let shuffled = [...array];
+	for (let i = shuffled.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+	}
+	return shuffled;
 }
 
 // Start game from disclaimer
 function startGame() {
+	gameState.selectedCategory = categorySelect.value;
 	disclaimerModal.style.display = 'none';
 	gameArea.style.display = 'block';
 	gameState.gameStarted = true;
-	displayCard();
+	
+	loadFlashcards();
 }
 
 // Display current card with animation
@@ -50,6 +100,8 @@ function displayCard() {
 		showGameResults();
 		return;
 	}
+	
+	updateProgressBar();
 	
 	const card = gameState.flashcards[gameState.currentIndex];
 	const cardDiv = document.createElement("div");
@@ -67,7 +119,7 @@ function displayCard() {
 	cardDiv.addEventListener("click", () => {
 		cardDiv.classList.toggle("flipped");
 		// Enable buttons when card is flipped
-		if (cardDiv.classList.contains("flipped")) {
+		if (cardDiv.classList.contains("flipped") && !gameState.answered) {
 			correctBtn.disabled = false;
 			incorrectBtn.disabled = false;
 		} else {
@@ -87,6 +139,12 @@ function displayCard() {
 	gameState.answered = false;
 }
 
+// Update progress bar
+function updateProgressBar() {
+	const progress = (gameState.currentIndex / gameState.totalCards) * 100;
+	progressBar.style.width = `${progress}%`;
+}
+
 // Update card display info
 function updateCardInfo() {
 	currentCardDisplay.textContent = `Card ${gameState.currentIndex + 1} of ${gameState.totalCards}`;
@@ -102,12 +160,6 @@ function hideProcessing() {
 	processingStatus.style.display = 'none';
 }
 
-// Reset button states
-function resetButtonStates() {
-	correctBtn.disabled = false;
-	incorrectBtn.disabled = false;
-}
-
 // Mark answer as correct
 function markCorrect() {
 	if (gameState.answered) return;
@@ -121,7 +173,7 @@ function markCorrect() {
 	showProcessing();
 	
 	// Auto-advance after delay
-	setTimeout(nextCard, 3000);
+	setTimeout(nextCard, 1500);
 }
 
 // Mark answer as incorrect
@@ -136,7 +188,7 @@ function markIncorrect() {
 	showProcessing();
 	
 	// Auto-advance after delay
-	setTimeout(nextCard, 3000);
+	setTimeout(nextCard, 1500);
 }
 
 // Apply processing animation with revolving border
@@ -165,15 +217,14 @@ function nextCard() {
 
 // Show game results
 function showGameResults() {
-	// Hide game area
-	gameArea.style.display = 'none';
-
-	// Show game area again for results
-	gameArea.style.display = 'block';
+	// Update progress bar to 100%
+	progressBar.style.width = '100%';
+	
+	// Hide game area components
 	container.style.display = 'none';
 	document.querySelector('.card-info').style.display = 'none';
 	document.querySelector('.action-buttons').style.display = 'none';
-	resetBtnResults.style.display = 'block';
+	document.querySelector('.progress-container').style.display = 'none';
 	
 	const accuracy = Math.round((gameState.correctCount / gameState.totalCards) * 100);
 	
@@ -192,11 +243,13 @@ function resetGame() {
 	gameState.gameStarted = false;
 	
 	gameResultsDiv.style.display = 'none';
-	resetBtnResults.style.display = 'none';
 	container.style.display = 'flex';
 	container.innerHTML = '';
 	document.querySelector('.card-info').style.display = 'block';
 	document.querySelector('.action-buttons').style.display = 'flex';
+	document.querySelector('.progress-container').style.display = 'block';
+	progressBar.style.width = '0%';
+	
 	hideProcessing();
 	gameArea.style.display = 'none';
 	
@@ -210,4 +263,4 @@ incorrectBtn.addEventListener('click', markIncorrect);
 resetBtnResults.addEventListener('click', resetGame);
 
 // Initialize the game
-loadFlashcards();
+loadCategories();

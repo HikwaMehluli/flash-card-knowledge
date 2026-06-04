@@ -1,52 +1,84 @@
-[
-    {
-        "id": 1,
-        "question": "What does the Zimbabwe Bird on the national flag represent?",
-        "answer": "The Zimbabwe Bird represents the country's rich history and national identity, originating from soapstone carvings found at Great Zimbabwe."
-    },
-    {
-        "id": 2,
-        "question": "What is the historical significance of the Unity Accord signed on December 22, 1987?",
-        "answer": "The Unity Accord merged Zimbabwe's two primary liberation political parties, ZANU and ZAPU, to form ZANU-PF, successfully ending years of internal civil conflict."
-    },
-    {
-        "id": 3,
-        "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
-        "answer": "Robert Gabriel Mugabe became executive president in 1987 and ruled the country for three decades until November 2017."
-    },
-    {
-        "id": 4,
-        "question": "Which massive medieval stone city serves as a national monument and gave Zimbabwe its modern name?",
-        "answer": "Great Zimbabwe, built between the 11th and 15th centuries by the Shona people, is a UNESCO World Heritage site from which the nation derives its name."
-    },
-    {
-        "id": 5,
-        "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
-        "answer": "The Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
-    },
-    {
-        "id": 6,
-        "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
-        "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence in 1980."
-    },
-    {
-        "id": 7,
-        "question": "Which natural wonder, shared by Zimbabwe and Zambia, is the world's largest curtain of falling water?",
-        "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a major national monument and natural world wonder."
-    },
-    {
-        "id": 8,
-        "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
-        "answer": "The Great Enclosure. It features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
-    },
-    {
-        "id": 9,
-        "question": "What do the red stripes on the Zimbabwean national flag represent?",
-        "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Chimurenga)."
-    },
-    {
-        "id": 10,
-        "question": "How many official languages does Zimbabwe recognize in its national constitution?",
-        "answer": "16 official languages. Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
-    }
-]
+{
+    "topic": "Zimbabwe",
+    "flashCardName": "Zimbabwe, Did you know facts?",
+    "dateCreated": "2026-06-04",
+    "dateUpdated": "2026-06-04",
+    "description": "Deep dive into Zimbabwe's medieval stone cities, natural wonders, and rich cultural heritage.",
+    "flashcards": [
+        {
+            "id": 1,
+            "question": "What does the Zimbabwe Bird on the national flag represent?",
+            "answer": "The Zimbabwe Bird represents the country's rich history and national identity, originating from soapstone carvings found at Great Zimbabwe."
+        },
+        {
+            "id": 2,
+            "question": "What is the historical significance of the Unity Accord signed on December 22, 1987?",
+            "answer": "The Unity Accord merged Zimbabwe's two primary liberation political parties, ZANU and ZAPU, to form ZANU-PF, successfully ending years of internal civil conflict."
+        },
+        {
+            "id": 3,
+            "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
+            "answer": "Robert Gabriel Mugabe became executive president in 1987 and ruled the country for three decades until November 2017."
+        },
+        {
+            "id": 4,
+            "question": "Which massive medieval stone city serves as a national monument and gave Zimbabwe its modern name?",
+            "answer": "Great Zimbabwe, built between the 11th and 15th centuries by the Shona people, is a UNESCO World Heritage site from which the nation derives its name."
+        },
+        {
+            "id": 5,
+            "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
+            "answer": "The Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
+        },
+        {
+            "id": 6,
+            "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
+            "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence in 1980."
+        },
+        {
+            "id": 7,
+            "question": "Which natural wonder, shared by Zimbabwe and Zambia, is the world's largest curtain of falling water?",
+            "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a major national monument and natural world wonder."
+        },
+        {
+            "id": 8,
+            "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
+            "answer": "The Great Enclosure. It features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
+        },
+        {
+            "id": 9,
+            "question": "What do the red stripes on the Zimbabwean national flag represent?",
+            "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Chimurenga)."
+        },
+        {
+            "id": 10,
+            "question": "How many official languages does Zimbabwe recognize in its national constitution?",
+            "answer": "16 official languages. Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
+        },
+        {
+            "id": 11,
+            "question": "Who is the legendary Kalanga Chief associated with the history of the Bulilima and Mangwe regions?",
+            "answer": "Chief Hikwa. He remains a foundational figure in the identity of the Kalanga people, whose heritage spans across Southern Zimbabwe (Plumtree/Bulilima) and Northern Botswana."
+        },
+        {
+            "id": 12,
+            "question": "In the geography of Southern Zimbabwe, which major town sits closer to the Botswana border than to Bulawayo?",
+            "answer": "Plumtree. Located in the heart of Kalanga territory, Plumtree is a vital border town situated significantly closer to Botswana than the city of Bulawayo."
+        },
+        {
+            "id": 13,
+            "question": "What is the primary role of the African Union (AU) in modern continental politics?",
+            "answer": "To promote African integration and unity, seeking to resolve conflicts peacefully and driving the 'Agenda 2063' for a prosperous, self-reliant Africa."
+        },
+        {
+            "id": 14,
+            "question": "What does the green color on the Zimbabwean flag represent?",
+            "answer": "The green color represents the country's agriculture and rural areas, signifying the importance of the land to the Zimbabwean people."
+        },
+        {
+            "id": 15,
+            "question": "Which liberation movement, led by Joshua Nkomo, played a critical role in the struggle against colonial rule in Zimbabwe?",
+            "answer": "ZAPU (Zimbabwe African People's Union). Nkomo, known as 'Father Zimbabwe,' was a central figure in the fight for independence and national sovereignty."
+        }
+    ]
+}

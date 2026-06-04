@@ -14,6 +14,14 @@
 			<div class="modal-content">
 				<h2>Self-Evaluation Test</h2>
 				<p>This is a <strong>self-evaluation</strong> quiz designed to help you assess your knowledge.</p>
+				
+				<div class="category-selection">
+					<label for="category-select">Choose a Topic:</label>
+					<select id="category-select" class="category-select">
+						<!-- Categories will be injected here -->
+					</select>
+				</div>
+
 				<ul class="disclaimer-list">
 					<li>You will be presented with 10 flashcards</li>
 					<li>Read each question carefully, <strong>Then click the card</strong> to see the answer</li>
@@ -35,11 +43,16 @@
 				</button>
 			</div>
 
-			<h1>Zimbabwe, Did you know?</h1>
-			<p class="header-description">Flash Cards to Test your Knowledge and Self-evaluate your understanding with honest feedback.</p>
+			<h1 id="header-title">Zimbabwe, Did you know?</h1>
+			<p id="header-description" class="header-description">Flash Cards to Test your Knowledge and Self-evaluate your understanding with honest feedback.</p>
 		</header>
+
 		
 		<main class="main-content" id="game-area" style="display: none;">
+			<div class="progress-container">
+				<div id="progress-bar" class="progress-bar"></div>
+			</div>
+			
 			<div class="card-info">
 				<span id="current-card">Card 1 of 10</span>
 				<span id="processing-status" class="processing-status" style="display: none;">Processing Answer...</span>

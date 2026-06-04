@@ -1,268 +1,95 @@
 # Flash Card Knowledge Game
 
-An interactive flash card quiz game inspired by NotebookLM's flash card system, featuring a JSON-based API backend for data retrieval and quiz-style score tracking with self-evaluation mode.
+An interactive, multi-category flash card quiz game featuring a dynamic JSON-based API backend, real-time progress tracking, and a polished self-evaluation system.
 
-## Features
+## 🚀 Features
 
-✨ **Self-Evaluation Mode** - Disclaimer screen explains the quiz before starting  
-✨ **Interactive Flash Cards** - Click to flip and reveal answers  
-🎮 **Auto-Advancing Cards** - Automatically moves to next card after marking answer with smooth animation  
-📊 **Score Tracking** - Real-time tracking of correct answers, total cards, and accuracy percentage  
-🌐 **API Backend** - Node.js/Express server serving flashcards as JSON  
-🎨 **Light/Dark Mode** - Toggle between themes with localStorage persistence  
-📱 **Responsive Design** - Works on desktop, tablet, and mobile devices  
-✨ **Smooth Animations** - Flat design with card entry/exit animations and transitions  
+✨ **Dynamic Categories** - Choose from multiple topics like Zimbabwe, Namibia, South Africa, Zambia, or Web Development.  
+✨ **Self-Evaluation Mode** - Disclaimer screen explains the quiz and allows topic selection before starting.  
+✨ **Interactive Flash Cards** - Click to flip and reveal answers with smooth 3D animations.  
+📊 **Progress Bar** - Visual indicator of your advancement through the 10-card session.  
+📈 **Real-Time Accuracy** - Automatically calculates your score and accuracy percentage.  
+🎮 **Snappy Feedback** - Cards auto-advance after 1.5 seconds once an answer is marked.  
+🎨 **Theming** - Light/Dark mode toggle with persistence via `localStorage`.  
+🌐 **Modern Backend** - Node.js/Express server that dynamically loads categories and metadata from JSON files.  
+📱 **Responsive & Accessible** - Fully responsive design with a scrollable modal for smaller screens.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 flash-card-knowledge/
-├── index.html              # Main HTML file with UI structure & disclaimer modal
-├── package.json            # Node.js dependencies
-├── server.js               # Express backend API server
+├── api/                   # JSON data files for different topics
 ├── css/
-│   └── style.css          # Flat design styling with animations & theme support
-└── js/
-    ├── create.js          # Frontend game logic and API integration
-    └── theme.js           # Theme management with localStorage
+│   └── style.css          # Theme-aware styling and animations
+├── js/
+│   ├── create.js          # Main game logic and API integration
+│   └── theme.js           # Theme toggle and persistence
+├── server.js               # Express API server with dynamic loading
+├── .env                    # Environment configuration
+├── index.html              # Main application entry point
+└── package.json            # Dependencies and scripts
 ```
 
-## Setup Instructions
+## 🛠️ Setup Instructions
 
 ### 1. Install Dependencies
-
 ```bash
 npm install
 ```
 
-This will install:
-- `express` - Web server framework
-- `cors` - Cross-origin resource sharing
-- `nodemon` (dev) - Auto-restart server during development
+### 2. Configure Environment
+Create a `.env` file in the root directory (optional, defaults to port 3000):
+```env
+PORT=3000
+```
 
-### 2. Start the Backend Server
-
+### 3. Start the Server
 ```bash
 npm start
 ```
+The app will be available at `http://localhost:3000`.
 
-The server will start on `http://localhost:3000`
+## 🎮 How to Play
 
-You should see:
-```
-Flash Card API Server running on http://localhost:3000
-Serve flashcards from: http://localhost:3000/api/flashcards
-Open the app: http://localhost:3000
-```
+1. **Select a Topic** - Use the dropdown in the initial modal to choose your quiz category.
+2. **Read the Question** - The card shows a question from the chosen topic.
+3. **Flip for Answer** - Click the card to see the correct answer.
+4. **Self-Evaluate** - Mark your answer as **Correct** or **Incorrect** based on your honest assessment.
+5. **Auto-Advance** - The game will move to the next card automatically after 1.5 seconds.
+6. **View Results** - Get your final score and accuracy percentage at the end of the 10-card round.
 
-### 3. Access the Game
+## 🌐 API Endpoints
 
-Open your browser and navigate to:
-```
-http://localhost:3000
-```
+### Get Categories
+`GET /api/categories` - Returns a list of available topics dynamically scanned from the `api/` folder.
 
-## How to Play
+### Get Flashcards
+`GET /api/flashcards?category=[id]` - Fetches flashcards and metadata for a specific topic.
 
-1. **Read the Disclaimer** - Understand that this is a self-evaluation quiz
-2. **Click "Start Quiz"** - Begin the quiz
-3. **Read the Question** - The front of the card displays the question
-4. **Click to Flip** - Click the card to reveal the answer
-5. **Evaluate Your Knowledge** - Click either:
-   - **✓ Correct** - If you got it right
-   - **✗ Incorrect** - If you got it wrong
-6. **Auto-Advance** - Card automatically transitions to the next question after 1.5 seconds
-7. **Track Progress** - Watch your score update in the header in real-time
-8. **View Results** - After all 10 cards, see your final score and accuracy percentage
-9. **Reset or Quit** - Click "Reset Game" to start over
+## 📝 Adding New Content
 
-## Game Flow
+To add a new category, simply create a new file in the `api/` directory following this naming convention: `yourname_facts.json`.
 
-```
-Disclaimer Modal
-      ↓
-  [Start Quiz]
-      ↓
-Load & Display Card 1
-      ↓
-User Flips Card
-      ↓
-Mark Correct/Incorrect
-      ↓
-Card Exits with Animation → Card Enters with Animation
-      ↓
-Repeat for Cards 2-10
-      ↓
-Results Screen
-```
-
-## Theme System
-
-### Light Mode (Default)
-- White background with dark text
-- Professional blue and grey colors
-- Subtle shadows for depth
-
-### Dark Mode
-- Dark background (#1a1a1a)
-- Light grey text
-- Blue accents maintained
-- Easy on the eyes for night studying
-
-### Toggle Theme
-- Click the button in header (🌙 or ☀️)
-- Theme preference is saved to localStorage
-- Persists across browser sessions
-
-## API Endpoints
-
-### Get All Flashcards
-```
-GET /api/flashcards
-```
-
-Response:
+**Data Format:**
 ```json
 {
-  "success": true,
-  "data": [
-    {
-      "id": 1,
-      "question": "What does HTML stand for?",
-      "answer": "HyperText Markup Language..."
-    },
-    ...
-  ],
-  "total": 11
+    "topic": "Display Name",
+    "flashCardName": "Full Header Title",
+    "dateCreated": "YYYY-MM-DD",
+    "dateUpdated": "YYYY-MM-DD",
+    "description": "Short description of the topic.",
+    "flashcards": [
+        { "id": 1, "question": "...", "answer": "..." }
+    ]
 }
 ```
 
-### Get Single Flashcard
-```
-GET /api/flashcards/:id
-```
+## 💻 Tech Stack
 
-## Current Flashcards (11 total)
+- **Frontend:** Vanilla JavaScript, CSS3 (Flexbox/Grid), HTML5.
+- **Backend:** Node.js, Express.
+- **Storage:** `localStorage` (Theme preference).
+- **Environment:** `dotenv`.
 
-1. Zimbabwean Kalanga Chief - Cultural knowledge
-2. HTML Basics - Web development
-3. CSS Styling - Web development
-4. JavaScript Role - Web development
-5. DOM Manipulation - Web development
-6. Semantic HTML - Web development
-7. Callback Functions - Web development
-8. Variable Declarations - Web development
-9. APIs - Web development
-10. Async vs Sync - Web development
-11. Responsive Design - Web development
-
-## Adding New Flashcards
-
-Edit [server.js](server.js) and add to the `flashcards` array:
-
-```javascript
-{
-    id: 12,
-    question: "Your question here?",
-    answer: "Your answer here in detail."
-}
-```
-
-## Development
-
-To use auto-reload during development:
-```bash
-npm run dev
-```
-
-This requires `nodemon` (included in devDependencies).
-
-## Customization
-
-### Change Quiz Disclaimer
-Edit the modal content in [index.html](index.html) under `<!-- Self-Evaluation Modal -->`
-
-### Modify Styling
-Edit [css/style.css](css/style.css) to customize:
-- Colors (via CSS custom properties)
-- Card sizes
-- Font styles
-- Animation speeds
-
-### Update API Port
-In [server.js](server.js), change:
-```javascript
-const PORT = 3000;
-```
-
-Then update the API URL in [js/create.js](js/create.js):
-```javascript
-apiUrl: 'http://localhost:YOUR_PORT/api/flashcards'
-```
-
-### Change Auto-Advance Delay
-In [js/create.js](js/create.js), modify the timeout (currently 1500ms = 1.5 seconds):
-```javascript
-setTimeout(nextCard, 1500);  // Change 1500 to your preferred milliseconds
-```
-
-## Browser Compatibility
-
-- Chrome (latest)
-- Firefox (latest)
-- Safari (latest)
-- Edge (latest)
-
-## Technical Details
-
-### Frontend Technology
-- Vanilla JavaScript (no frameworks)
-- CSS3 animations and transforms
-- CSS custom properties for theming
-- localStorage API for persistence
-
-### Backend Technology
-- Node.js with Express
-- CORS enabled for cross-origin requests
-- Static file serving for frontend
-- JSON API
-
-### Animation Details
-- Card flip: 0.6s CSS 3D transform
-- Card entry: 0.4s slide-in from right
-- Card exit: 0.4s slide-out to left
-- Modal fade: 0.3s opacity transition
-- Results slide: 0.5s bounce effect
-
-## Files Modified
-
-| File | Changes |
-|------|---------|
-| `index.html` | Added disclaimer modal, reorganized layout |
-| `css/style.css` | Converted to flat design with CSS variables, added modal & animation styles |
-| `js/create.js` | Auto-advance logic, modal handling, card animations |
-| `js/theme.js` | (New) Light/Dark mode with localStorage |
-| `server.js` | 11 flashcards including Zimbabwean Kalanga Chief |
-
-## Files Deleted
-
-| File | Reason |
-|------|--------|
-| `js/data.js` | Unused - API serves all data |
-
-## Future Enhancements
-
-- Category-based flashcards
-- Shuffle mode
-- Difficulty levels
-- User authentication & progress tracking
-- Keyboard shortcuts (arrow keys to navigate)
-- Export results as PDF
-- Spaced repetition algorithm
-- Flashcard editor UI
-- Multiple language support
-- Leaderboard
-
-## License
-
-MIT License - Feel free to use and modify!
+---
+*Developed by Hikwa Mehluli*

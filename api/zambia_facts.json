@@ -1,52 +1,84 @@
-[
-    {
-        "id": 1,
-        "question": "When is Zambia's Independence Day and who was the colonial ruler?",
-        "answer": "Zambia gained independence from the United Kingdom on October 24, 1964."
-    },
-    {
-        "id": 2,
-        "question": "What was Zambia's name before independence?",
-        "answer": "It was known as Northern Rhodesia."
-    },
-    {
-        "id": 3,
-        "question": "What is the official language of Zambia?",
-        "answer": "English is the official language, used for business and education, alongside over 70 local languages."
-    },
-    {
-        "id": 4,
-        "question": "What does the orange eagle on the Zambian flag represent?",
-        "answer": "The eagle symbolizes the people's ability to rise above national problems."
-    },
-    {
-        "id": 5,
-        "question": "Which famous waterfall is located on the border of Zambia and Zimbabwe?",
-        "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a shared national monument."
-    },
-    {
-        "id": 6,
-        "question": "What is the main export and backbone of Zambia's economy?",
-        "answer": "Copper mining is the primary industry, as Zambia is one of the world's top copper producers."
-    },
-    {
-        "id": 7,
-        "question": "What is the capital city of Zambia?",
-        "answer": "Lusaka is the capital and largest city of Zambia."
-    },
-    {
-        "id": 8,
-        "question": "Which major river flows through Zambia and gives the country its name?",
-        "answer": "The Zambezi River flows through the country and is the fourth-longest river in Africa."
-    },
-    {
-        "id": 9,
-        "question": "What is the Kariba Dam?",
-        "answer": "It is one of the world's largest man-made dams, located on the Zambezi River between Zambia and Zimbabwe."
-    },
-    {
-        "id": 10,
-        "question": "What unique walking safari tradition started in Zambia?",
-        "answer": "South Luangwa National Park is known as the birthplace of the walking safari, popularized by Norman Carr."
-    }
-]
+{
+    "topic": "Zambia",
+    "flashCardName": "Zambia, Did you know facts?",
+    "dateCreated": "2026-06-04",
+    "dateUpdated": "2026-06-04",
+    "description": "Explore the heart of Africa with facts about Zambia's natural wonders, history, and traditions.",
+    "flashcards": [
+        {
+            "id": 1,
+            "question": "When is Zambia's Independence Day and who was the colonial ruler?",
+            "answer": "Zambia gained independence from the United Kingdom on October 24, 1964."
+        },
+        {
+            "id": 2,
+            "question": "What was Zambia's name before independence?",
+            "answer": "It was known as Northern Rhodesia."
+        },
+        {
+            "id": 3,
+            "question": "What is the official language of Zambia?",
+            "answer": "English is the official language, used for business and education, alongside over 70 local languages."
+        },
+        {
+            "id": 4,
+            "question": "What does the orange eagle on the Zambian flag represent?",
+            "answer": "The eagle symbolizes the people's ability to rise above national problems."
+        },
+        {
+            "id": 5,
+            "question": "Which famous waterfall is located on the border of Zambia and Zimbabwe?",
+            "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a shared national monument."
+        },
+        {
+            "id": 6,
+            "question": "What is the main export and backbone of Zambia's economy?",
+            "answer": "Copper mining is the primary industry, as Zambia is one of the world's top copper producers."
+        },
+        {
+            "id": 7,
+            "question": "What is the capital city of Zambia?",
+            "answer": "Lusaka is the capital and largest city of Zambia."
+        },
+        {
+            "id": 8,
+            "question": "Which major river flows through Zambia and gives the country its name?",
+            "answer": "The Zambezi River flows through the country and is the fourth-longest river in Africa."
+        },
+        {
+            "id": 9,
+            "question": "What is the Kariba Dam?",
+            "answer": "It is one of the world's largest man-made dams, located on the Zambezi River between Zambia and Zimbabwe."
+        },
+        {
+            "id": 10,
+            "question": "What unique walking safari tradition started in Zambia?",
+            "answer": "South Luangwa National Park is known as the birthplace of the walking safari, popularized by Norman Carr."
+        },
+        {
+            "id": 11,
+            "question": "Who was the first President of Zambia and a champion of Pan-Africanism?",
+            "answer": "Kenneth Kaunda (KK). He led the nation from 1964 to 1991 and was a key supporter of liberation movements in Southern Africa."
+        },
+        {
+            "id": 12,
+            "question": "What does the slogan 'One Zambia, One Nation' represent?",
+            "answer": "It was Kenneth Kaunda's unifying motto aimed at fostering national identity and unity among Zambia's 72 ethnic groups."
+        },
+        {
+            "id": 13,
+            "question": "What do the red and black stripes on the Zambian flag symbolize?",
+            "answer": "Red represents the struggle for freedom and black represents the Zambian people."
+        },
+        {
+            "id": 14,
+            "question": "What is the historical significance of the Mulungushi Rock of Authority?",
+            "answer": "It is a natural landmark in Kabwe used as a venue for major political gatherings and is considered the birthplace of Zambian independence."
+        },
+        {
+            "id": 15,
+            "question": "How did Zambia support its neighbors during their liberation struggles?",
+            "answer": "Zambia served as a safe haven and operational base for movements like the ANC (South Africa), SWAPO (Namibia), and ZAPU/ZANU (Zimbabwe)."
+        }
+    ]
+}

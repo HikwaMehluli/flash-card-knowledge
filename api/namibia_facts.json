@@ -1,52 +1,84 @@
-[
-    {
-        "id": 1,
-        "question": "When did Namibia gain independence and from which country?",
-        "answer": "Namibia gained independence on March 21, 1990, from South Africa."
-    },
-    {
-        "id": 2,
-        "question": "What is the oldest desert in the world located in Namibia?",
-        "answer": "The Namib Desert is considered the world's oldest desert, dating back at least 55 million years."
-    },
-    {
-        "id": 3,
-        "question": "What do the colors of the Namibian flag represent?",
-        "answer": "Blue represents the sky and ocean, red the people, green the vegetation, white peace, and the yellow sun represents life and energy."
-    },
-    {
-        "id": 4,
-        "question": "What is the official language of Namibia?",
-        "answer": "English is the official language, though many people speak Oshiwambo, Afrikaans, or German."
-    },
-    {
-        "id": 5,
-        "question": "What is the 'Skeleton Coast'?",
-        "answer": "It is a northern coastal region named for the numerous whale bones and shipwrecks scattered along its shore due to dense fogs."
-    },
-    {
-        "id": 6,
-        "question": "What is the Fish River Canyon?",
-        "answer": "Located in southern Namibia, it is the largest canyon in Africa and a major national monument."
-    },
-    {
-        "id": 7,
-        "question": "Who was the colonial ruler of Namibia before South Africa took control?",
-        "answer": "Germany colonized the area as German South West Africa from 1884 until 1915."
-    },
-    {
-        "id": 8,
-        "question": "What is unique about Namibia's population density?",
-        "answer": "Namibia is one of the least densely populated countries in the world due to its vast desert landscapes."
-    },
-    {
-        "id": 9,
-        "question": "What is Etosha National Park famous for?",
-        "answer": "It is famous for its massive salt pan, which is visible from space, and its abundant wildlife around waterholes."
-    },
-    {
-        "id": 10,
-        "question": "What rare desert-adapted animal can be found in the Kunene region?",
-        "answer": "Namibia is home to rare desert-adapted elephants and black rhinos."
-    }
-]
+{
+    "topic": "Namibia",
+    "flashCardName": "Namibia, Did you know facts?",
+    "dateCreated": "2026-06-04",
+    "dateUpdated": "2026-06-04",
+    "description": "Test your knowledge about Namibia's rich history, diverse landscapes, and unique wildlife.",
+    "flashcards": [
+        {
+            "id": 1,
+            "question": "When did Namibia gain independence and from which country?",
+            "answer": "Namibia gained independence on March 21, 1990, from South Africa."
+        },
+        {
+            "id": 2,
+            "question": "What is the oldest desert in the world located in Namibia?",
+            "answer": "The Namib Desert is considered the world's oldest desert, dating back at least 55 million years."
+        },
+        {
+            "id": 3,
+            "question": "What do the colors of the Namibian flag represent?",
+            "answer": "Blue represents the sky and ocean, red the people, green the vegetation, white peace, and the yellow sun represents life and energy."
+        },
+        {
+            "id": 4,
+            "question": "What is the official language of Namibia?",
+            "answer": "English is the official language, though many people speak Oshiwambo, Afrikaans, or German."
+        },
+        {
+            "id": 5,
+            "question": "What is the 'Skeleton Coast'?",
+            "answer": "It is a northern coastal region named for the numerous whale bones and shipwrecks scattered along its shore due to dense fogs."
+        },
+        {
+            "id": 6,
+            "question": "What is the Fish River Canyon?",
+            "answer": "Located in southern Namibia, it is the largest canyon in Africa and a major national monument."
+        },
+        {
+            "id": 7,
+            "question": "Who was the colonial ruler of Namibia before South Africa took control?",
+            "answer": "Germany colonized the area as German South West Africa from 1884 until 1915."
+        },
+        {
+            "id": 8,
+            "question": "What is unique about Namibia's population density?",
+            "answer": "Namibia is one of the least densely populated countries in the world due to its vast desert landscapes."
+        },
+        {
+            "id": 9,
+            "question": "What is Etosha National Park famous for?",
+            "answer": "It is famous for its massive salt pan, which is visible from space, and its abundant wildlife around waterholes."
+        },
+        {
+            "id": 10,
+            "question": "What rare desert-adapted animal can be found in the Kunene region?",
+            "answer": "Namibia is home to rare desert-adapted elephants and black rhinos."
+        },
+        {
+            "id": 11,
+            "question": "Who was the first President of independent Namibia and a key leader of SWAPO?",
+            "answer": "Sam Nujoma. He served as the first President from 1990 to 2005 and is regarded as the 'Founding Father of the Namibian Nation'."
+        },
+        {
+            "id": 12,
+            "question": "What is the significance of the 1904-1908 war in Namibian history?",
+            "answer": "It was the Herero and Nama genocide committed by German colonial forces, a dark chapter that Namibia continues to seek justice and reparations for."
+        },
+        {
+            "id": 13,
+            "question": "What does the yellow sun on the Namibian flag symbolize?",
+            "answer": "Life, energy, and the warmth of the Namibian people, signifying a bright and hopeful future."
+        },
+        {
+            "id": 14,
+            "question": "How does Namibia contribute to Southern African integration through its infrastructure?",
+            "answer": "Through the Walvis Bay port and the Trans-Kalahari Corridor, providing vital trade links for landlocked neighbors like Botswana and Zimbabwe."
+        },
+        {
+            "id": 15,
+            "question": "Which Namibian city is known as the 'highest' and is the nation's capital?",
+            "answer": "Windhoek. It sits in a basin surrounded by mountains and serves as the social, political, and economic heart of the country."
+        }
+    ]
+}
