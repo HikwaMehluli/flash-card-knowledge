@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "question": "What is unique about South Africa's capital cities?",
+        "answer": "South Africa is the only country in the world with three official capital cities: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
+    },
+    {
+        "id": 2,
+        "question": "What is the nickname for South Africa's national flag?",
+        "answer": "The flag is known as the 'Rainbow Nation' flag, representing the country's diverse cultures."
+    },
+    {
+        "id": 3,
+        "question": "How many official languages does South Africa recognize?",
+        "answer": "South Africa has 12 official languages, including English, Afrikaans, Zulu, Xhosa, and South African Sign Language."
+    },
+    {
+        "id": 4,
+        "question": "When is South Africa's Freedom Day and what does it celebrate?",
+        "answer": "Freedom Day is April 27th, commemorating the first post-apartheid democratic elections held in 1994."
+    },
+    {
+        "id": 5,
+        "question": "Who was the colonial ruler of South Africa before independence?",
+        "answer": "South Africa was colonized by both the Netherlands and Great Britain before gaining full independence as a republic in 1961."
+    },
+    {
+        "id": 6,
+        "question": "What is the Cradle of Humankind?",
+        "answer": "It is a UNESCO World Heritage site near Johannesburg that has produced a large percentage of the world's hominid fossils."
+    },
+    {
+        "id": 7,
+        "question": "Which famous South African won the Nobel Peace Prize in 1993 alongside F.W. de Klerk?",
+        "answer": "Nelson Mandela was awarded the prize for his work to peacefully terminate the apartheid regime."
+    },
+    {
+        "id": 8,
+        "question": "What is the highest mountain range in South Africa?",
+        "answer": "The Drakensberg (meaning 'Dragon's Mountains') is the highest range, reaching over 3,000 meters."
+    },
+    {
+        "id": 9,
+        "question": "What unique plant kingdom is found almost exclusively in South Africa?",
+        "answer": "The Cape Floral Region, known for its Fynbos vegetation, is the smallest but richest of the world's six floral kingdoms."
+    },
+    {
+        "id": 10,
+        "question": "What animal is South Africa's national animal?",
+        "answer": "The Springbok is the national animal and the namesake of the national rugby team."
+    }
+]

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card Knowledge - Quiz Game</title>
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<div class="app-container">
+		<!-- Self-Evaluation Modal -->
+		<div id="disclaimer-modal" class="modal-overlay">
+			<div class="modal-content">
+				<h2>Self-Evaluation Test</h2>
+				<p>This is a <strong>self-evaluation</strong> quiz designed to help you assess your knowledge.</p>
+				<ul class="disclaimer-list">
+					<li>You will be presented with 10 flashcards</li>
+					<li>Read each question carefully and flip the card to see the answer</li>
+					<li>After revealing the answer, mark whether you got it <strong>Correct</strong> or <strong>Incorrect</strong></li>
+					<li>Be honest with yourself - accuracy is just for your own tracking</li>
+					<li>Cards will automatically advance after you mark your answer</li>
+					<li>At the end, you'll see your final score and accuracy percentage</li>
+				</ul>
+				<button id="start-btn" class="btn btn-next">
+					Start Quiz →
+				</button>
+			</div>
+		</div>
+
+		<!-- Header with title and score -->
+		<header class="header">
+			<button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+				<span id="theme-icon">🌙</span>
+				<span id="theme-text">Dark</span>
+			</button>
+			<h1>Flash Card Knowledge Game</h1>
+			<p class="header-description">Test your Knowledge and Self-evaluate your understanding with honest feedback.</p>
+		</header>
+
+		<!-- Main content -->
+		<main class="main-content" id="game-area" style="display: none;">
+			<!-- Current card info with progress bar -->
+			<div class="card-info">
+				<div class="progress-bar-container">
+					<div class="progress-bar" id="progress-bar"></div>
+				</div>
+				<span id="current-card">Card 1 of 10</span>
+				<span id="processing-status" class="processing-status" style="display: none;">processing...</span>
+			</div>
+
+			<!-- Flashcard container -->
+			<div id="flashcard-container" class="flashcard-container">
+				<!-- Cards will be injected here -->
+			</div>
+
+			<!-- Action buttons -->
+			<div class="action-buttons">
+				<button id="correct-btn" class="btn btn-correct" disabled>
+					✓ Correct
+				</button>
+				<button id="incorrect-btn" class="btn btn-incorrect" disabled>
+					✗ Incorrect
+				</button>
+			</div>
+
+			<!-- Reset and Results -->
+			<div class="bottom-actions">
+				<button id="reset-btn" class="btn btn-reset" style="display: none;">
+					Reset Game
+				</button>
+				<div id="game-results" class="game-results" style="display: none;">
+					<h2>Quiz Complete!</h2>
+					<div class="final-score">
+						<p>You got <strong id="final-correct">0</strong> out of <strong id="final-total">0</strong> correct!</p>
+						<p class="accuracy">Accuracy: <strong id="final-accuracy">0%</strong></p>
+					</div>
+					<button id="reset-btn-results" class="btn btn-reset" style="margin-top: 30px;">
+						Reset Game
+					</button>
+				</div>
+			</div>
+		</main>
+	</div>
+    
+	<script src="./js/theme.js"></script>
+	<script src="./js/create.js"></script>
+</body>
+</html>

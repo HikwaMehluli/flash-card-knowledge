@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "question": "When is Zambia's Independence Day and who was the colonial ruler?",
+        "answer": "Zambia gained independence from the United Kingdom on October 24, 1964."
+    },
+    {
+        "id": 2,
+        "question": "What was Zambia's name before independence?",
+        "answer": "It was known as Northern Rhodesia."
+    },
+    {
+        "id": 3,
+        "question": "What is the official language of Zambia?",
+        "answer": "English is the official language, used for business and education, alongside over 70 local languages."
+    },
+    {
+        "id": 4,
+        "question": "What does the orange eagle on the Zambian flag represent?",
+        "answer": "The eagle symbolizes the people's ability to rise above national problems."
+    },
+    {
+        "id": 5,
+        "question": "Which famous waterfall is located on the border of Zambia and Zimbabwe?",
+        "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a shared national monument."
+    },
+    {
+        "id": 6,
+        "question": "What is the main export and backbone of Zambia's economy?",
+        "answer": "Copper mining is the primary industry, as Zambia is one of the world's top copper producers."
+    },
+    {
+        "id": 7,
+        "question": "What is the capital city of Zambia?",
+        "answer": "Lusaka is the capital and largest city of Zambia."
+    },
+    {
+        "id": 8,
+        "question": "Which major river flows through Zambia and gives the country its name?",
+        "answer": "The Zambezi River flows through the country and is the fourth-longest river in Africa."
+    },
+    {
+        "id": 9,
+        "question": "What is the Kariba Dam?",
+        "answer": "It is one of the world's largest man-made dams, located on the Zambezi River between Zambia and Zimbabwe."
+    },
+    {
+        "id": 10,
+        "question": "What unique walking safari tradition started in Zambia?",
+        "answer": "South Luangwa National Park is known as the birthplace of the walking safari, popularized by Norman Carr."
+    }
+]

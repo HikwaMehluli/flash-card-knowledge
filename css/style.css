@@ -1,0 +1,576 @@
+/* Color Scheme - CSS Custom Properties */
+:root {
+	--primary-color: #2c3e50;
+	--secondary-color: #3498db;
+	--background-color: #ffffff;
+	--surface-color: #f8f9fa;
+	--text-primary: #2c3e50;
+	--text-secondary: #7f8c8d;
+	--border-color: #ecf0f1;
+	--shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+	--shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
+	--correct-color: #27ae60;
+	--incorrect-color: #e74c3c;
+	--button-hover: #34495e;
+	--button-next: #3498db;
+	--button-reset: #f39c12;
+}
+
+/* Dark Mode Theme */
+:root[data-theme="dark"] {
+	--primary-color: #ecf0f1;
+	--secondary-color: #3498db;
+	--background-color: #1a1a1a;
+	--surface-color: #2d2d2d;
+	--text-primary: #ecf0f1;
+	--text-secondary: #95a5a6;
+	--border-color: #34495e;
+	--shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+	--shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
+	--correct-color: #2ecc71;
+	--incorrect-color: #e74c3c;
+	--button-hover: #95a5a6;
+	--button-next: #3498db;
+	--button-reset: #f39c12;
+}
+
+/* Reset and Base Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--background-color);
+	color: var(--text-primary);
+	min-height: 100vh;
+	padding: 20px;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* App Container */
+.app-container {
+	max-width: 1000px;
+	margin: 0 auto;
+	background-color: var(--background-color);
+	border-radius: 12px;
+	box-shadow: var(--shadow-lg);
+	overflow: hidden;
+	border: 1px solid var(--border-color);
+}
+
+/* Header */
+.header {
+	background-color: var(--primary-color);
+	color: white;
+	padding: 30px;
+	text-align: center;
+	position: relative;
+}
+
+.header h1 {
+	font-size: 2.5em;
+	margin-bottom: 20px;
+	font-weight: 700;
+	letter-spacing: -0.5px;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-size: 0.9em;
+	font-weight: 600;
+	transition: background 0.3s ease;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.theme-toggle:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* Header Description */
+.header-description {
+	font-size: 1.05em;
+	color: rgba(255, 255, 255, 0.9);
+	margin-bottom: 0;
+	line-height: 1.6;
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Main Content */
+.main-content {
+	padding: 40px;
+	background-color: var(--background-color);
+}
+.card-info {
+	position: relative;
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 1.1em;
+	color: var(--text-secondary);
+	font-weight: 500;
+	padding: 12px 0;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--surface-color);
+	border-radius: 6px;
+	overflow: hidden;
+	z-index: -1;
+}
+
+.progress-bar {
+	height: 100%;
+	background: linear-gradient(90deg, var(--secondary-color), var(--button-next));
+	width: 0%;
+	transition: width 0.3s ease;
+	opacity: 0.3;
+}
+
+/* Processing Status */
+.processing-status {
+	display: block;
+	font-size: 0.9em;
+	color: var(--secondary-color);
+	font-style: italic;
+	margin-top: 8px;
+	animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+	0%, 100% {
+		opacity: 0.7;
+	}
+	50% {
+		opacity: 1;
+	}
+}
+
+/* Flashcard Container */
+.flashcard-container {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 40px;
+	min-height: 300px;
+	align-items: center;
+}
+
+.card {
+	width: 500px;
+	height: 300px;
+	perspective: 1000px;
+	cursor: pointer;
+	flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+	.card {
+		width: 350px;
+		height: 250px;
+	}
+}
+
+@media (max-width: 480px) {
+	.card {
+		width: 280px;
+		height: 200px;
+	}
+}
+
+.card-inner {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.6s ease;
+	transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+	transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+	padding: 30px;
+	box-shadow: var(--shadow-lg);
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.2em;
+	line-height: 1.6;
+	border: 2px solid var(--border-color);
+	transition: all 0.3s ease;
+}
+
+.card-front {
+	background-color: var(--primary-color);
+	color: white;
+	font-weight: 600;
+}
+
+.card-back {
+	background-color: var(--secondary-color);
+	color: white;
+	transform: rotateY(180deg);
+}
+
+/* Card State Highlighting */
+.card.correct-answer .card-front,
+.card.correct-answer .card-back {
+	border-color: var(--correct-color);
+	box-shadow: 0 4px 16px rgba(39, 174, 96, 0.2);
+}
+
+.card.incorrect-answer .card-front,
+.card.incorrect-answer .card-back {
+	border-color: var(--incorrect-color);
+	box-shadow: 0 4px 16px rgba(231, 76, 60, 0.2);
+}
+
+/* Action Buttons */
+.action-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.btn {
+	padding: 12px 30px;
+	font-size: 1em;
+	border: 1px solid transparent;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: all 0.3s ease;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+	box-shadow: var(--shadow);
+}
+
+.btn:hover:not(:disabled) {
+	transform: translateY(-2px);
+	box-shadow: var(--shadow-lg);
+}
+
+.btn:active:not(:disabled) {
+	transform: translateY(0);
+}
+
+.btn:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+.btn-correct {
+	background-color: var(--correct-color);
+	color: white;
+	border-color: var(--correct-color);
+}
+
+.btn-correct:hover:not(:disabled) {
+	background-color: #229954;
+}
+
+.btn-incorrect {
+	background-color: var(--incorrect-color);
+	color: white;
+	border-color: var(--incorrect-color);
+}
+
+.btn-incorrect:hover:not(:disabled) {
+	background-color: #c0392b;
+}
+
+.btn-next {
+	background-color: var(--button-next);
+	color: white;
+	border-color: var(--button-next);
+}
+
+.btn-next:hover:not(:disabled) {
+	background-color: #2980b9;
+}
+
+.btn-reset {
+	background-color: var(--button-reset);
+	color: white;
+	border-color: var(--button-reset);
+}
+
+.btn-reset:hover {
+	background-color: #e67e22;
+}
+
+/* Bottom Actions */
+.bottom-actions {
+	text-align: center;
+	margin-top: 30px;
+}
+
+/* Game Results */
+.game-results {
+	margin-top: 40px;
+	padding: 40px;
+	background-color: var(--surface-color);
+	border-radius: 12px;
+	text-align: center;
+	border: 1px solid var(--border-color);
+	animation: slideIn 0.5s ease;
+}
+
+.game-results h2 {
+	font-size: 2.5em;
+	color: var(--primary-color);
+	margin-bottom: 30px;
+	font-weight: 700;
+}
+
+.final-score {
+	font-size: 1.3em;
+	margin-bottom: 20px;
+}
+
+.final-score p {
+	margin: 15px 0;
+	color: var(--text-primary);
+}
+
+.final-score strong {
+	color: var(--secondary-color);
+	font-size: 1.3em;
+	font-weight: 700;
+}
+
+.accuracy {
+	font-size: 1.5em;
+	color: var(--primary-color);
+	font-weight: 600;
+}
+
+/* Error Message */
+.error {
+	color: var(--incorrect-color);
+	font-size: 1.2em;
+	padding: 20px;
+	background-color: rgba(231, 76, 60, 0.1);
+	border-radius: 8px;
+	border-left: 4px solid var(--incorrect-color);
+}
+
+/* Animations */
+@keyframes slideIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes cardExit {
+	from {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-100px) scale(0.9);
+	}
+}
+
+@keyframes cardEntry {
+	from {
+		opacity: 0;
+		transform: translateX(100px) scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0) scale(1);
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Modal Styles */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+	background-color: var(--background-color);
+	padding: 40px;
+	border-radius: 12px;
+	max-width: 600px;
+	width: 90%;
+	box-shadow: var(--shadow-lg);
+	animation: slideIn 0.4s ease;
+}
+
+.modal-content h2 {
+	color: var(--primary-color);
+	font-size: 2em;
+	margin-bottom: 20px;
+	font-weight: 700;
+}
+
+.modal-content p {
+	color: var(--text-primary);
+	font-size: 1.1em;
+	margin-bottom: 25px;
+	line-height: 1.6;
+}
+
+.disclaimer-list {
+	list-style: none;
+	margin-bottom: 30px;
+	padding-left: 0;
+}
+
+.disclaimer-list li {
+	color: var(--text-primary);
+	padding: 12px;
+	padding-left: 35px;
+	margin-bottom: 8px;
+	position: relative;
+	line-height: 1.6;
+	border-left: 3px solid var(--secondary-color);
+	background-color: var(--surface-color);
+	border-radius: 4px;
+}
+
+.disclaimer-list li:before {
+	content: "✓";
+	position: absolute;
+	left: 10px;
+	color: var(--secondary-color);
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.modal-content .btn {
+	width: 100%;
+	padding: 15px;
+	font-size: 1.05em;
+}
+
+/* Card Animation Classes */
+.card.exit-animation {
+	animation: cardExit 0.4s ease forwards;
+}
+
+.card.entry-animation {
+	animation: cardEntry 0.4s ease forwards;
+}
+
+/* Responsive Modal */
+@media (max-width: 768px) {
+	.modal-content {
+		padding: 25px;
+	}
+
+	.modal-content h2 {
+		font-size: 1.6em;
+	}
+
+	.modal-content p {
+		font-size: 1em;
+	}
+
+	.disclaimer-list li {
+		padding: 10px;
+		padding-left: 30px;
+		font-size: 0.95em;
+	}
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+	.header {
+		padding: 20px;
+	}
+
+	.header h1 {
+		font-size: 1.8em;
+	}
+
+	.theme-toggle {
+		position: static;
+		margin-bottom: 15px;
+	}
+
+	.header-description {
+		font-size: 0.95em;
+	}
+
+	.main-content {
+		padding: 20px;
+	}
+
+	.action-buttons {
+		gap: 10px;
+	}
+
+	.btn {
+		padding: 10px 20px;
+		font-size: 0.9em;
+	}
+
+	.game-results {
+		padding: 20px;
+	}
+
+	.game-results h2 {
+		font-size: 1.8em;
+	}
+
+	.final-score {
+		font-size: 1.1em;
+	}
+}

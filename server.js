@@ -1,0 +1,96 @@
+const express = require('express');
+const cors = require('cors');
+const path = require('path');
+
+const app = express();
+const PORT = 3000;
+
+// Middleware
+app.use(cors());
+app.use(express.json());
+app.use(express.static(path.join(__dirname)));
+
+// Flashcards data
+const flashcards = [
+    {
+        "id": 1,
+        "question": "What does the Zimbabwe Bird on the national flag represent?",
+        "answer": "The Zimbabwe Bird represents the country's rich history and national identity, originating from soapstone carvings found at Great Zimbabwe."
+    },
+    {
+        "id": 2,
+        "question": "What is the historical significance of the Unity Accord signed on December 22, 1987?",
+        "answer": "The Unity Accord merged Zimbabwe's two primary liberation political parties, ZANU and ZAPU, to form ZANU-PF, successfully ending years of internal civil conflict."
+    },
+    {
+        "id": 3,
+        "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
+        "answer": "Robert Gabriel Mugabe became executive president in 1987 and ruled the country for three decades until November 2017."
+    },
+    {
+        "id": 4,
+        "question": "Which massive medieval stone city serves as a national monument and gave Zimbabwe its modern name?",
+        "answer": "Great Zimbabwe, built between the 11th and 15th centuries by the Shona people, is a UNESCO World Heritage site from which the nation derives its name."
+    },
+    {
+        "id": 5,
+        "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
+        "answer": "The Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
+    },
+    {
+        "id": 6,
+        "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
+        "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence."
+    },
+    {
+        "id": 7,
+        "question": "Which natural wonder, shared by Zimbabwe and Zambia, is the world's largest curtain of falling water?",
+        "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a major national monument and natural world wonder."
+    },
+    {
+        "id": 8,
+        "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
+        "answer": "The Great Enclosure features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
+    },
+    {
+        "id": 9,
+        "question": "What do the red stripes on the Zimbabwean national flag represent?",
+        "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Chimurenga)."
+    },
+    {
+        "id": 10,
+        "question": "How many official languages does Zimbabwe recognize in its national constitution?",
+        "answer": "Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
+    }
+];
+
+// API endpoint to get all flashcards
+app.get('/api/flashcards', (req, res) => {
+    res.json({
+        success: true,
+        data: flashcards,
+        total: flashcards.length
+    });
+});
+
+// API endpoint to get a single flashcard
+app.get('/api/flashcards/:id', (req, res) => {
+    const card = flashcards.find(c => c.id === parseInt(req.params.id));
+    if (card) {
+        res.json({
+            success: true,
+            data: card
+        });
+    } else {
+        res.status(404).json({
+            success: false,
+            message: 'Flashcard not found'
+        });
+    }
+});
+
+app.listen(PORT, () => {
+    console.log(`Flash Card API Server running on http://localhost:${PORT}`);
+    console.log(`Serve flashcards from: http://localhost:${PORT}/api/flashcards`);
+    console.log(`Open the app: http://localhost:${PORT}`);
+});
