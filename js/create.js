@@ -64,6 +64,14 @@ function displayCard() {
 
 	cardDiv.addEventListener("click", () => {
 		cardDiv.classList.toggle("flipped");
+		// Enable buttons when card is flipped
+		if (cardDiv.classList.contains("flipped")) {
+			correctBtn.disabled = false;
+			incorrectBtn.disabled = false;
+		} else {
+			correctBtn.disabled = true;
+			incorrectBtn.disabled = true;
+		}
 	});
 
 	container.innerHTML = '';
@@ -71,7 +79,9 @@ function displayCard() {
 	
 	// Update card info and reset button states
 	updateCardInfo();
-	resetButtonStates();
+	// Disable buttons until card is flipped
+	correctBtn.disabled = true;
+	incorrectBtn.disabled = true;
 	gameState.answered = false;
 }
 
@@ -105,7 +115,7 @@ function markCorrect() {
 	correctBtn.disabled = true;
 	incorrectBtn.disabled = true;
 	
-	highlightCardCorrect();
+	applyProcessingAnimation();
 	showProcessing();
 	
 	// Auto-advance after delay
@@ -120,23 +130,17 @@ function markIncorrect() {
 	correctBtn.disabled = true;
 	incorrectBtn.disabled = true;
 	
-	highlightCardIncorrect();
+	applyProcessingAnimation();
 	showProcessing();
 	
 	// Auto-advance after delay
 	setTimeout(nextCard, 1500);
 }
 
-// Highlight card as correct
-function highlightCardCorrect() {
+// Apply processing animation with revolving border
+function applyProcessingAnimation() {
 	const card = container.querySelector('.card');
-	if (card) card.classList.add('correct-answer');
-}
-
-// Highlight card as incorrect
-function highlightCardIncorrect() {
-	const card = container.querySelector('.card');
-	if (card) card.classList.add('incorrect-answer');
+	if (card) card.classList.add('processing');
 }
 
 // Move to next card with animation

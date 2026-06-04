@@ -242,17 +242,10 @@ body.dark-mode .processing-status {
 	transform: rotateY(180deg);
 }
 
-/* Card State Highlighting */
-.card.correct-answer .card-front,
-.card.correct-answer .card-back {
-	border-color: var(--correct-color);
-	box-shadow: 0 4px 16px rgba(39, 174, 96, 0.2);
-}
-
-.card.incorrect-answer .card-front,
-.card.incorrect-answer .card-back {
-	border-color: var(--incorrect-color);
-	box-shadow: 0 4px 16px rgba(231, 76, 60, 0.2);
+/* Card State - Processing Animation */
+.card.processing .card-front,
+.card.processing .card-back {
+	animation: revolvingBorder 2s linear infinite;
 }
 
 /* Action Buttons */
@@ -421,6 +414,21 @@ body.dark-mode .processing-status {
 	}
 	to {
 		opacity: 1;
+	}
+}
+
+@keyframes revolvingBorder {
+	0% {
+		border-color: var(--correct-color);
+		box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
+	}
+	50% {
+		border-color: var(--incorrect-color);
+		box-shadow: 0 4px 16px rgba(231, 76, 60, 0.3);
+	}
+	100% {
+		border-color: var(--correct-color);
+		box-shadow: 0 4px 16px rgba(39, 174, 96, 0.3);
 	}
 }
 
