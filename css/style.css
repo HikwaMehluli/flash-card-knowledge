@@ -8,10 +8,11 @@
 	--border-color: #ecf0f1;
 	--correct-color: #148e47;
 	--incorrect-color: #d34a3a;
+	--transition: all 0.3s ease;
 }
 
 /* Dark Mode Theme */
-:root[data-theme="dark"] {
+body.dark-mode {
 	--primary-color: #1e3b58;
 	--secondary-color: #167cc0;
 	--background-color: #0a131d;
@@ -31,6 +32,7 @@
 
 body {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
 	background-color: var(--background-color);
 	color: var(--text-primary);
 	transition: background-color 0.3s ease, color 0.3s ease;
@@ -38,10 +40,8 @@ body {
 
 /* App Container */
 .app-container {
-	/* max-width: 1000px; */
-	margin: 0 auto;
 	background-color: var(--background-color);
-	overflow: hidden;
+	margin: 0 auto;
 }
 
 /* Header */
@@ -54,14 +54,14 @@ body {
 }
 
 .header h1 {
-	font-size: 2.5em;
+	font-size: 2.2em;
 	margin-bottom: 20px;
 	font-weight: 700;
 	letter-spacing: -0.5px;
 }
 
 /* Theme Toggle Button */
-.theme-toggle {
+/* .theme-toggle {
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -73,15 +73,74 @@ body {
 	cursor: pointer;
 	font-size: 0.9em;
 	font-weight: 600;
-	transition: background 0.3s ease;
+	transition: background .5s ease;
 	display: flex;
 	align-items: center;
 	gap: 8px;
+	
+	&:hover {
+		background: rgba(255, 255, 255, .4);
+	}
+} */
+
+
+/* ==========================================================================
+   Theme Switcher
+   ========================================================================== */
+.theme-toggle {
+	z-index: 8;
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
 
-.theme-toggle:hover {
-	background: rgba(255, 255, 255, 0.3);
+.theme-toggle button {
+	background-color: var(--primary-color);
+	border: 2px solid var(--secondary-color);
+	cursor: pointer;
+	width: 45px;
+	height: 45px;
+	transition: var(--transition);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 8px;
 }
+
+.theme-toggle button:hover {
+	background-color: var(--secondary-color);
+	border: 2px solid var(--secondary-color);
+}
+
+.theme-toggle button .icon {
+	display: block;
+	width: 32px;
+	height: 32px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: var(--transition);
+	background-image: url('../icons/svg/light-mode.svg');
+	filter: invert(0);
+}
+
+.theme-toggle button:hover .icon {
+	filter: invert(1);
+}
+
+body.dark-mode .theme-toggle button .icon {
+	background-image: url('../icons/svg/dark-mode.svg');
+	filter: invert(1);
+}
+
+body.dark-mode .theme-toggle button:hover .icon {
+	filter: invert(0);
+}
+
+
+
+
+
+
 
 /* Header Description */
 .header-description {
@@ -109,10 +168,8 @@ body {
 	font-weight: 500;
 }
 
-:root[data-theme="dark"] {
-	.card-info {
-		color: white;
-	}
+body.dark-mode .card-info {
+	color: white;
 }
 
 /* Processing Status */
@@ -125,10 +182,8 @@ body {
 	animation: pulse 1s infinite;
 }
 
-:root[data-theme="dark"] {
-	.processing-status {
-		color: white;
-	}
+body.dark-mode .processing-status {
+	color: white;
 }
 
 @keyframes pulse {
@@ -241,7 +296,7 @@ body {
 	border: 1px solid transparent;
 	border-radius: 8px;
 	cursor: pointer;
-	font-weight: 600;
+	font-weight: 500;
 	transition: all 0.3s ease;
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
@@ -433,10 +488,8 @@ body {
 	line-height: 1.6;
 }
 
-:root[data-theme="dark"] {
-	.modal-content h2 {
-		color: white;
-	}
+body.dark-mode .modal-content h2 {
+	color: white;
 }
 
 .disclaimer-list {
@@ -516,6 +569,12 @@ body {
 		position: static;
 		margin-bottom: 15px;
 	}
+
+	.theme-toggle {
+		position: static;
+		margin-bottom: 15px;
+	}
+	
 
 	.header-description {
 		font-size: 0.95em;

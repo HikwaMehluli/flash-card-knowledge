@@ -1,61 +1,43 @@
-// Theme Management with localStorage
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
 
-const THEME_KEY = 'flashcard-theme';
-const LIGHT_THEME = 'light';
-const DARK_THEME = 'dark';
+    // Function to apply the theme based on preference
+    const applyTheme = (theme) => {
+        if (theme === 'dark') {
+            body.classList.add('dark-mode');
+        } else {
+            body.classList.remove('dark-mode');
+        }
+    };
 
-// Get the saved theme from localStorage or default to light
-function getSavedTheme() {
-	const savedTheme = localStorage.getItem(THEME_KEY);
-	return savedTheme || LIGHT_THEME;
-}
+    // Check for saved theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
 
-// Set theme in localStorage and apply it
-function setTheme(theme) {
-	localStorage.setItem(THEME_KEY, theme);
-	applyTheme(theme);
-}
+    if (savedTheme) {
+        applyTheme(savedTheme);
+    } else {
+        // Check system preference if no saved theme
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        applyTheme(prefersDark ? 'dark' : 'light');
+    }
 
-// Apply theme to the document
-function applyTheme(theme) {
-	const htmlElement = document.documentElement;
-	const themeToggle = document.getElementById('theme-toggle');
-	const themeIcon = document.getElementById('theme-icon');
-	const themeText = document.getElementById('theme-text');
+    // Save theme preference on click
+    themeToggle.addEventListener('click', () => {
+        if (body.classList.contains('dark-mode')) {
+            applyTheme('light');
+            localStorage.setItem('theme', 'light');
+        } else {
+            applyTheme('dark');
+            localStorage.setItem('theme', 'dark');
+        }
+    });
 
-	if (theme === DARK_THEME) {
-		htmlElement.setAttribute('data-theme', DARK_THEME);
-		themeIcon.textContent = '☀️';
-		themeText.textContent = 'Light';
-	} else {
-		htmlElement.removeAttribute('data-theme');
-		themeIcon.textContent = '🌙';
-		themeText.textContent = 'Dark';
-	}
-}
-
-// Toggle theme
-function toggleTheme() {
-	const currentTheme = getSavedTheme();
-	const newTheme = currentTheme === LIGHT_THEME ? DARK_THEME : LIGHT_THEME;
-	setTheme(newTheme);
-}
-
-// Initialize theme on page load
-function initializeTheme() {
-	const savedTheme = getSavedTheme();
-	applyTheme(savedTheme);
-
-	// Add event listener to theme toggle button
-	const themeToggle = document.getElementById('theme-toggle');
-	if (themeToggle) {
-		themeToggle.addEventListener('click', toggleTheme);
-	}
-}
-
-// Initialize when DOM is ready
-if (document.readyState === 'loading') {
-	document.addEventListener('DOMContentLoaded', initializeTheme);
-} else {
-	initializeTheme();
-}
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        // Only apply system theme change if user hasn't set a preference
+        if (!localStorage.getItem('theme')) {
+            applyTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+});
