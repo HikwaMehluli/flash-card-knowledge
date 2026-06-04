@@ -16,7 +16,6 @@ const gameArea = document.getElementById("game-area");
 const container = document.getElementById("flashcard-container");
 const correctBtn = document.getElementById("correct-btn");
 const incorrectBtn = document.getElementById("incorrect-btn");
-const resetBtn = document.getElementById("reset-btn");
 const resetBtnResults = document.getElementById("reset-btn-results");
 const currentCardDisplay = document.getElementById("current-card");
 const processingStatus = document.getElementById("processing-status");
@@ -202,7 +201,6 @@ function resetGame() {
 startBtn.addEventListener('click', startGame);
 correctBtn.addEventListener('click', markCorrect);
 incorrectBtn.addEventListener('click', markIncorrect);
-resetBtn.addEventListener('click', resetGame);
 resetBtnResults.addEventListener('click', resetGame);
 
 // Initialize the game

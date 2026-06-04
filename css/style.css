@@ -116,11 +116,10 @@ body {
 .card-info {
 	position: relative;
 	text-align: center;
-	margin-bottom: 30px;
-	font-size: 1.1em;
+	margin-bottom: 10px;
+	font-size: 1.2em;
 	color: var(--primary-color);
 	font-weight: 500;
-	padding: 12px 0;
 }
 
 :root[data-theme="dark"] {
@@ -132,11 +131,17 @@ body {
 /* Processing Status */
 .processing-status {
 	display: block;
-	font-size: 0.9em;
+	font-size: 0.8em;
 	color: var(--secondary-color);
 	font-style: italic;
-	margin-top: 8px;
+	visibility: visible;
 	animation: pulse 1s infinite;
+}
+
+:root[data-theme="dark"] {
+	.processing-status {
+		color: white;
+	}
 }
 
 @keyframes pulse {
@@ -206,7 +211,7 @@ body {
 	text-align: center;
 	font-size: 1.2em;
 	line-height: 1.6;
-	border: 2px solid var(--border-color);
+	border: 5px solid var(--border-color);
 	transition: all 0.3s ease;
 }
 
@@ -319,7 +324,6 @@ body {
 
 /* Game Results */
 .game-results {
-	margin-top: 40px;
 	padding: 40px;
 	background-color: var(--surface-color);
 	border-radius: 12px;
@@ -447,6 +451,12 @@ body {
 	font-size: 1.1em;
 	margin-bottom: 25px;
 	line-height: 1.6;
+}
+
+:root[data-theme="dark"] {
+	.modal-content h2 {
+		color: white;
+	}
 }
 
 .disclaimer-list {
