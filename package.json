@@ -1,6 +1,7 @@
 {
   "name": "flash-card-game",
   "version": "1.0.0",
+  "author": "Hikwa Mehluli",
   "description": "Interactive Flash Card Game with API Backend",
   "main": "server.js",
   "scripts": {

@@ -40,7 +40,7 @@ const flashcards = [
     {
         "id": 6,
         "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
-        "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence."
+        "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence in 1980."
     },
     {
         "id": 7,
@@ -50,7 +50,7 @@ const flashcards = [
     {
         "id": 8,
         "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
-        "answer": "The Great Enclosure features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
+        "answer": "The Great Enclosure. It features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
     },
     {
         "id": 9,
@@ -60,7 +60,7 @@ const flashcards = [
     {
         "id": 10,
         "question": "How many official languages does Zimbabwe recognize in its national constitution?",
-        "answer": "Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
+        "answer": "16 official languages. Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
     }
 ];
 
