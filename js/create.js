@@ -19,7 +19,6 @@ const incorrectBtn = document.getElementById("incorrect-btn");
 const resetBtn = document.getElementById("reset-btn");
 const resetBtnResults = document.getElementById("reset-btn-results");
 const currentCardDisplay = document.getElementById("current-card");
-const progressBar = document.getElementById("progress-bar");
 const processingStatus = document.getElementById("processing-status");
 const gameResultsDiv = document.getElementById("game-results");
 
@@ -77,13 +76,9 @@ function displayCard() {
 	gameState.answered = false;
 }
 
-// Update card display info with progress bar
+// Update card display info
 function updateCardInfo() {
 	currentCardDisplay.textContent = `Card ${gameState.currentIndex + 1} of ${gameState.totalCards}`;
-	
-	// Update progress bar
-	const progressPercent = ((gameState.currentIndex) / gameState.totalCards) * 100;
-	progressBar.style.width = progressPercent + '%';
 }
 
 // Show processing status
@@ -198,7 +193,6 @@ function resetGame() {
 	document.querySelector('.card-info').style.display = 'block';
 	document.querySelector('.action-buttons').style.display = 'flex';
 	hideProcessing();
-	progressBar.style.width = '0%';
 	gameArea.style.display = 'none';
 	
 	disclaimerModal.style.display = 'flex';

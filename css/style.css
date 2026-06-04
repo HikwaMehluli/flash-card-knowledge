@@ -1,37 +1,33 @@
 /* Color Scheme - CSS Custom Properties */
 :root {
-	--primary-color: #2c3e50;
+	--primary-color: #1e3b58;
 	--secondary-color: #3498db;
 	--background-color: #ffffff;
 	--surface-color: #f8f9fa;
-	--text-primary: #2c3e50;
+	--text-primary: #1e3b58;
 	--text-secondary: #7f8c8d;
 	--border-color: #ecf0f1;
 	--shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 	--shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.12);
-	--correct-color: #27ae60;
-	--incorrect-color: #e74c3c;
-	--button-hover: #34495e;
-	--button-next: #3498db;
-	--button-reset: #f39c12;
+	--correct-color: #148e47;
+	--incorrect-color: #d34a3a;
+	--button-reset: #efa912;
 }
 
 /* Dark Mode Theme */
 :root[data-theme="dark"] {
-	--primary-color: #ecf0f1;
+	--primary-color: #1e3b58;
 	--secondary-color: #3498db;
-	--background-color: #1a1a1a;
+	--background-color: #161517;
 	--surface-color: #2d2d2d;
 	--text-primary: #ecf0f1;
 	--text-secondary: #95a5a6;
 	--border-color: #34495e;
 	--shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 	--shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.4);
-	--correct-color: #2ecc71;
-	--incorrect-color: #e74c3c;
-	--button-hover: #95a5a6;
-	--button-next: #3498db;
-	--button-reset: #f39c12;
+	--correct-color: #148e47;
+	--incorrect-color: #d34a3a;
+	--button-reset: #efa912;
 }
 
 /* Reset and Base Styles */
@@ -116,35 +112,21 @@ body {
 	padding: 40px;
 	background-color: var(--background-color);
 }
+
 .card-info {
 	position: relative;
 	text-align: center;
 	margin-bottom: 30px;
 	font-size: 1.1em;
-	color: var(--text-secondary);
+	color: var(--primary-color);
 	font-weight: 500;
 	padding: 12px 0;
 }
 
-/* Progress Bar */
-.progress-bar-container {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: var(--surface-color);
-	border-radius: 6px;
-	overflow: hidden;
-	z-index: -1;
-}
-
-.progress-bar {
-	height: 100%;
-	background: linear-gradient(90deg, var(--secondary-color), var(--button-next));
-	width: 0%;
-	transition: width 0.3s ease;
-	opacity: 0.3;
+:root[data-theme="dark"] {
+	.card-info {
+		color: white;
+	}
 }
 
 /* Processing Status */
@@ -310,9 +292,9 @@ body {
 }
 
 .btn-next {
-	background-color: var(--button-next);
+	background-color: var(--secondary-color);
 	color: white;
-	border-color: var(--button-next);
+	border-color: var(--secondary-color);
 }
 
 .btn-next:hover:not(:disabled) {
