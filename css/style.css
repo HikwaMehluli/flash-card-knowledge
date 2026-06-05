@@ -235,6 +235,22 @@ body.dark-mode .processing-status {
 	transform: rotateY(180deg);
 }
 
+.card__date-updated {
+	font-size: 0.5em;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.card__reveal-statement {
+	font-size: 0.5em;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
 /* Card State - Processing Animation */
 /* .card.processing .card-front, */
 .card.processing .card-back {

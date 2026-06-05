@@ -6,7 +6,9 @@ An interactive, multi-category flash card quiz game featuring a dynamic JSON-bas
 
 ✨ **Dynamic Categories** - Choose from multiple topics like Zimbabwe, Namibia, South Africa, Zambia, or Web Development.  
 ✨ **Self-Evaluation Mode** - Disclaimer screen explains the quiz and allows topic selection before starting.  
+✨ **Keyboard Support** - Press **Enter** to quickly start the quiz from the initial modal.  
 ✨ **Interactive Flash Cards** - Click to flip and reveal answers with smooth 3D animations.  
+✨ **Content Freshness** - Each flash card displays its "Last Update" date to ensure data transparency.  
 📊 **Progress Bar** - Visual indicator of your advancement through the 10-card session.  
 📈 **Real-Time Accuracy** - Automatically calculates your score and accuracy percentage.  
 🎮 **Snappy Feedback** - Cards auto-advance after 1.5 seconds once an answer is marked.  
@@ -51,7 +53,7 @@ The app will be available at `http://localhost:3000`.
 
 ## 🎮 How to Play
 
-1. **Select a Topic** - Use the dropdown in the initial modal to choose your quiz category.
+1. **Select a Topic** - Use the dropdown in the initial modal to choose your quiz category. (Tip: You can press **Enter** to start the quiz instantly!)
 2. **Read the Question** - The card shows a question from the chosen topic.
 3. **Flip for Answer** - Click the card to see the correct answer.
 4. **Self-Evaluate** - Mark your answer as **Correct** or **Incorrect** based on your honest assessment.

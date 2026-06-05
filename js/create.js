@@ -7,8 +7,33 @@ let gameState = {
 	totalCards: 0,
 	answered: false,
 	gameStarted: false,
+	dateUpdated: '',
 	baseApiUrl: '/api'
 };
+
+// Utility to format date (e.g., 2026-06-05 to 5th June 2026)
+function formatDate(dateString) {
+	if (!dateString) return '';
+	
+	// If it's already in a long format (contains non-digits), return it
+	if (/[a-zA-Z]/.test(dateString)) return dateString;
+
+	const date = new Date(dateString);
+	if (isNaN(date.getTime())) return dateString;
+
+	const day = date.getDate();
+	const month = date.toLocaleString('default', { month: 'long' });
+	const year = date.getFullYear();
+
+	// Add ordinal suffix (st, nd, rd, th)
+	const getOrdinal = (n) => {
+		const s = ["th", "st", "nd", "rd"];
+		const v = n % 100;
+		return n + (s[(v - 20) % 10] || s[v] || s[0]);
+	};
+
+	return `${getOrdinal(day)} ${month} ${year}`;
+}
 
 // DOM elements
 const disclaimerModal = document.getElementById("disclaimer-modal");
@@ -65,6 +90,7 @@ async function loadFlashcards() {
 		if (data.metadata) {
 			headerTitle.textContent = data.metadata.name;
 			headerDescription.textContent = data.metadata.description;
+			gameState.dateUpdated = data.metadata.dateUpdated;
 		}
 		
 		displayCard();
@@ -110,6 +136,7 @@ function displayCard() {
 	cardDiv.innerHTML = `
 		<div class="card-inner">
 			<div class="card-front">
+			<p class="card__date-updated">Last Update: ${formatDate(gameState.dateUpdated)}</p>
 				${card.question}
 			</div>
 			<div class="card-back">${card.answer}</div>
@@ -261,6 +288,13 @@ startBtn.addEventListener('click', startGame);
 correctBtn.addEventListener('click', markCorrect);
 incorrectBtn.addEventListener('click', markIncorrect);
 resetBtnResults.addEventListener('click', resetGame);
+
+// Keyboard support for Enter key to start quiz
+window.addEventListener('keydown', (e) => {
+	if (e.key === 'Enter' && !gameState.gameStarted && disclaimerModal.style.display !== 'none') {
+		startGame();
+	}
+});
 
 // Initialize the game
 loadCategories();

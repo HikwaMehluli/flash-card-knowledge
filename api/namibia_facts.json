@@ -1,8 +1,8 @@
 {
     "topic": "Namibia",
-    "flashCardName": "Namibia, Did you know facts?",
+    "flashCardName": "Namibia, land of the brave!",
     "dateCreated": "2026-06-04",
-    "dateUpdated": "2026-06-04",
+    "dateUpdated": "5th June 2026",
     "description": "Test your knowledge about Namibia's rich history, diverse landscapes, and unique wildlife.",
     "flashcards": [
         {
@@ -79,6 +79,12 @@
             "id": 15,
             "question": "Which Namibian city is known as the 'highest' and is the nation's capital?",
             "answer": "Windhoek. It sits in a basin surrounded by mountains and serves as the social, political, and economic heart of the country."
+        },
+        {
+            "id": 16,
+            "question": "What is the national anthem of Namibia and who composed it?",
+            "answer": "\"Namibia, Land of the Brave\" is the national anthem, adopted in December 1991. It was composed by Axali Doëseb, the director of a traditional music group from the Kalahari Desert, who won a contest following independence."
         }
     ]
 }
+
