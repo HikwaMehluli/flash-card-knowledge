@@ -11,7 +11,7 @@ let gameState = {
 	baseApiUrl: '/api'
 };
 
-// Utility to format date (e.g., 2026-06-05 to 5th June 2026)
+// Utility to format date (e.g., 2026-06-05 to 2026-06-05)
 function formatDate(dateString) {
 	if (!dateString) return '';
 	
