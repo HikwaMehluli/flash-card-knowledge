@@ -7,8 +7,8 @@
     "flashcards": [
         {
             "id": 1,
-            "question": "What is unique about South Africa's capital cities?",
-            "answer": "South Africa is the only country in the world with three official capital cities: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
+            "question": "Did you know South Africa has three (3) capital cities: Can you name them?",
+            "answer": "South Africa is the only country in the world with three capital cities: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
         },
         {
             "id": 2,
@@ -28,7 +28,7 @@
         {
             "id": 5,
             "question": "Who was the colonial ruler of South Africa before independence?",
-            "answer": "South Africa was colonized by both the Netherlands and Great Britain before gaining full independence as a republic in 1961."
+            "answer": "Colonization periods (Dutch/Netherlands in 1652) + British from the in 1806): Established early racial inequality and land dispossession. Apartheid (from 1948): A formal, legalized system of racial segregation."
         },
         {
             "id": 6,
@@ -58,7 +58,7 @@
         {
             "id": 11,
             "question": "What was the significance of the 1976 Soweto Uprising?",
-            "answer": "It was a student-led protest against the mandatory use of Afrikaans in schools, which became a turning point in the global struggle against Apartheid."
+            "answer": "It was a student-led protest against the compulsory use of Afrikaans in schools and became a turning point in the global struggle against apartheid."
         },
         {
             "id": 12,
@@ -67,8 +67,8 @@
         },
         {
             "id": 13,
-            "question": "What do the black, green, and yellow colors on the ANC and South African flag (partially) symbolize?",
-            "answer": "Black for the people, green for the land, and yellow for the wealth (gold) of the nation, representing the liberation struggle's ideals."
+            "question": "What do the colors black, green, and yellow on the South African flag symbolize?",
+            "answer": "Black represents the people, green represents the land, and yellow represents the country’s wealth (gold) and the ideals of the liberation struggle."
         },
         {
             "id": 14,

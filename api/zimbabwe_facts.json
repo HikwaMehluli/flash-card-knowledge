@@ -12,13 +12,13 @@
         },
         {
             "id": 2,
-            "question": "What is the historical significance of the Unity Accord signed on December 22, 1987?",
-            "answer": "The Unity Accord merged Zimbabwe's two primary liberation political parties, ZANU and ZAPU, to form ZANU-PF, successfully ending years of internal civil conflict."
-        },
+            "question": "Who is the most famous Zimbabwean soccer goalkeeper of all time?",
+            "answer": "Bruce Grobbelaar — a legendary goalkeeper for the Liverpool F.C., best known for his successful career in England during the 1980s and 1990s. And Zimbabwe's Shooting Star."
+          },
         {
             "id": 3,
             "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
-            "answer": "Robert Gabriel Mugabe became executive president in 1987 and ruled the country for three decades until November 2017."
+            "answer": "Robert Gabriel Mugabe became executive president in December 31, 1987 and ruled the country for three decades until November 2017."
         },
         {
             "id": 4,
@@ -28,7 +28,7 @@
         {
             "id": 5,
             "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
-            "answer": "The Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
+            "answer": "Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
         },
         {
             "id": 6,
@@ -48,16 +48,16 @@
         {
             "id": 9,
             "question": "What do the red stripes on the Zimbabwean national flag represent?",
-            "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Chimurenga)."
+            "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Umvukela/Chimurenga)."
         },
         {
             "id": 10,
             "question": "How many official languages does Zimbabwe recognize in its national constitution?",
-            "answer": "16 official languages. Zimbabwe holds a Guinness World Record for recognizing 16 official languages under its 2013 constitution."
+            "answer": "16 (Sixteen) official languages. It is one of the highest numbers recognized by any country’s constitution. Languages include Ndebele, English and Shona, and 13 other indigenous languages, reflecting the country's rich linguistic diversity and commitment to cultural inclusivity."
         },
         {
             "id": 11,
-            "question": "Who is the legendary Kalanga Chief associated with the history of the Bulilima and Mangwe regions?",
+            "question": "Who is the legendary Kalanga Chief associated with the history of the Bulilima and Mangwe regions in Zimbabwe?",
             "answer": "Chief Hikwa. He remains a foundational figure in the identity of the Kalanga people, whose heritage spans across Southern Zimbabwe (Plumtree/Bulilima) and Northern Botswana."
         },
         {
@@ -73,7 +73,7 @@
         {
             "id": 14,
             "question": "What does the green color on the Zimbabwean flag represent?",
-            "answer": "The green color represents the country's agriculture and rural areas, signifying the importance of the land to the Zimbabwean people."
+            "answer": "The green color represents the country's agricultural wealth and rural areas, emphasizing the vital role that the land plays in the lives of the Zimbabwean people."
         },
         {
             "id": 15,
