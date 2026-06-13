@@ -79,6 +79,11 @@
             "id": 15,
             "question": "Which liberation movement, led by Joshua Nkomo, played a critical role in the struggle against colonial rule in Zimbabwe?",
             "answer": "ZAPU (Zimbabwe African People's Union). Nkomo, known as 'Father Zimbabwe,' was a central figure in the fight for independence and national sovereignty."
+        },
+        {
+            "id": 15,
+            "question": "Zimbabwe is a landlocked country in which continent?",
+            "answer": "Africa. It is located in the southern region of the African continent, bordered by South Africa, Botswana, Zambia, and Mozambique."
         }
     ]
 }
