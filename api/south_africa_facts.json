@@ -2,83 +2,158 @@
     "topic": "South Africa",
     "flashCardName": "South Africa, Did you know facts?",
     "dateCreated": "2026-06-02",
-    "dateUpdated": "2026-06-06",
+    "dateUpdated": "2026-06-13",
     "description": "Discover fascinating facts about the Rainbow Nation, from its triple capitals to its diverse floral kingdoms.",
     "flashcards": [
         {
             "id": 1,
-            "question": "Did you know South Africa has three (3) capital cities: Can you name them?",
-            "answer": "South Africa is the only country in the world with three capital cities: Pretoria (executive), Cape Town (legislative), and Bloemfontein (judicial)."
+            "question": "What is unique about South Africa's capital cities?",
+            "answer": "It has three! Pretoria (government), Cape Town (laws), and Bloemfontein (courts)."
         },
         {
             "id": 2,
-            "question": "What is the nickname for South Africa's national flag?",
-            "answer": "The flag is known as the 'Rainbow Nation' flag, representing the country's diverse cultures."
+            "question": "What is the nickname for South Africa's flag?",
+            "answer": "The Rainbow Flag, because it shows many different cultures living together."
         },
         {
             "id": 3,
-            "question": "How many official languages does South Africa recognize?",
-            "answer": "South Africa has 12 official languages, including English, Afrikaans, Zulu, Xhosa, and South African Sign Language."
+            "question": "How many official languages does South Africa have?",
+            "answer": "12 official languages, which includes South African Sign Language."
         },
         {
             "id": 4,
-            "question": "When is South Africa's Freedom Day and what does it celebrate?",
-            "answer": "Freedom Day is April 27th, commemorating the first post-apartheid democratic elections held in 1994."
+            "question": "What does Freedom Day celebrate on April 27th?",
+            "answer": "The day in 1994 when all races could finally vote together."
         },
         {
             "id": 5,
-            "question": "Who was the colonial ruler of South Africa before independence?",
-            "answer": "Colonization periods (Dutch/Netherlands in 1652) + British from the in 1806): Established early racial inequality and land dispossession. Apartheid (from 1948): A formal, legalized system of racial segregation."
+            "question": "What was Apartheid in South Africa?",
+            "answer": "An old, unfair law system that kept white and black people separate."
         },
         {
             "id": 6,
             "question": "What is the Cradle of Humankind?",
-            "answer": "It is a UNESCO World Heritage site near Johannesburg that has produced a large percentage of the world's hominid fossils."
+            "answer": "A famous area with deep caves full of very old human fossils."
         },
         {
             "id": 7,
-            "question": "Which famous South African won the Nobel Peace Prize in 1993 alongside F.W. de Klerk?",
-            "answer": "Nelson Mandela was awarded the prize for his work to peacefully terminate the apartheid regime."
+            "question": "Which famous leader won the Nobel Peace Prize in 1993?",
+            "answer": "Nelson Mandela, for peacefully ending the unfair Apartheid system."
         },
         {
             "id": 8,
             "question": "What is the highest mountain range in South Africa?",
-            "answer": "The Drakensberg (meaning 'Dragon's Mountains') is the highest range, reaching over 3,000 meters."
+            "answer": "The Drakensberg. The name means 'Dragon's Mountains'."
         },
         {
             "id": 9,
-            "question": "What unique plant kingdom is found almost exclusively in South Africa?",
-            "answer": "The Cape Floral Region, known for its Fynbos vegetation, is the smallest but richest of the world's six floral kingdoms."
+            "question": "What is unique about the Cape Floral Region?",
+            "answer": "It is the smallest but richest plant kingdom in the world."
         },
         {
             "id": 10,
-            "question": "What animal is South Africa's national animal?",
-            "answer": "The Springbok is the national animal and the namesake of the national rugby team."
+            "question": "What is South Africa's national animal?",
+            "answer": "The Springbok. It is a jumping buck and the rugby team's name."
         },
         {
             "id": 11,
-            "question": "What was the significance of the 1976 Soweto Uprising?",
-            "answer": "It was a student-led protest against the compulsory use of Afrikaans in schools and became a turning point in the global struggle against apartheid."
+            "question": "What was the 1976 Soweto Uprising?",
+            "answer": "A big student protest against unfair language rules in schools."
         },
         {
             "id": 12,
-            "question": "Who was the 'Mother of the Nation' and a key figure in the anti-apartheid movement?",
-            "answer": "Winnie Madikizela-Mandela. She was a fearless leader who kept the spirit of resistance alive during Nelson Mandela's imprisonment."
+            "question": "Who is called the 'Mother of the Nation'?",
+            "answer": "Winnie Madikizela-Mandela. She fought for freedom while Nelson Mandela was in prison."
         },
         {
             "id": 13,
-            "question": "What do the colors black, green, and yellow on the South African flag symbolize?",
-            "answer": "Black represents the people, green represents the land, and yellow represents the country’s wealth (gold) and the ideals of the liberation struggle."
+            "question": "What do black, green, and yellow mean on the flag?",
+            "answer": "The people (black), the land (green), and the gold wealth (yellow)."
         },
         {
             "id": 14,
-            "question": "What was the 'Truth and Reconciliation Commission' (TRC)?",
-            "answer": "A court-like body established after Apartheid to help South Africans deal with what happened under the regime through truth-telling and amnesty."
+            "question": "What was the Truth and Reconciliation Commission?",
+            "answer": "A special court made to help people heal by telling the truth."
         },
         {
             "id": 15,
-            "question": "How does South Africa's constitution stand out globally regarding human rights?",
-            "answer": "It is one of the most progressive in the world, explicitly protecting rights regardless of race, gender, or sexual orientation, and recognizing 12 official languages."
+            "question": "Why is South Africa's constitution famous?",
+            "answer": "It is super fair and protects everyone, no matter who they are."
+        },
+        {
+            "id": 16,
+            "question": "What is South Africa's biggest and busiest city?",
+            "answer": "Johannesburg. It was built because people found a lot of gold there."
+        },
+        {
+            "id": 17,
+            "question": "What is the famous flat-topped mountain in Cape Town?",
+            "answer": "Table Mountain. It looks like a giant table covered by a cloud tablecloth."
+        },
+        {
+            "id": 18,
+            "question": "What is South Africa's national flower?",
+            "answer": "The King Protea. It looks like a giant, beautiful pink crown."
+        },
+        {
+            "id": 19,
+            "question": "What is South Africa's favorite barbecue called?",
+            "answer": "A Braai. It is a big party where meat is cooked over open fires."
+        },
+        {
+            "id": 20,
+            "question": "What is the name of South Africa's currency?",
+            "answer": "The Rand. It features pictures of the famous 'Big Five' wild animals."
+        },
+        {
+            "id": 21,
+            "question": "Where can you see thousands of wild animals in South Africa?",
+            "answer": "Kruger National Park. It is one of the biggest game reserves in Africa."
+        },
+        {
+            "id": 22,
+            "question": "What ocean current brings cold water to the west coast?",
+            "answer": "The Benguela Current. It comes up cold from the icy south."
+        },
+        {
+            "id": 23,
+            "question": "Where can you go to see wild penguins on the beach?",
+            "answer": "Boulders Beach. Thousands of small African penguins live right on the sand."
+        },
+        {
+            "id": 24,
+            "question": "What is the name of South Africa's national bird?",
+            "answer": "The Blue Crane. A beautiful, elegant bird with long grey-blue feathers."
+        },
+        {
+            "id": 25,
+            "question": "What is the massive hole in the ground left by diamond miners?",
+            "answer": "The Big Hole in Kimberley. It is the largest hand-dug hole ever."
+        },
+        {
+            "id": 26,
+            "question": "What popular sweet tea is native only to South Africa?",
+            "answer": "Rooibos tea. It is a healthy red bush tea that grows nowhere else."
+        },
+        {
+            "id": 27,
+            "question": "What island was Nelson Mandela kept as a prisoner on?",
+            "answer": "Robben Island. It sits in the cold ocean water just outside Cape Town."
+        },
+        {
+            "id": 28,
+            "question": "What are the loud plastic horns fans blow at soccer matches?",
+            "answer": "Vuvuzelas. They make a giant buzzing sound like a swarm of bees."
+        },
+        {
+            "id": 29,
+            "question": "What is the traditional corn porridge eaten here?",
+            "answer": "Pap. It is a thick starch usually eaten with meat and tomato gravy."
+        },
+        {
+            "id": 30,
+            "question": "What giant hole was made by a space rock in South Africa?",
+            "answer": "Vredefort Dome. It is the oldest and biggest verified meteor crater on Earth."
         }
     ]
 }

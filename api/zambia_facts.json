@@ -2,83 +2,158 @@
     "topic": "Zambia",
     "flashCardName": "Zambia, Did you know facts?",
     "dateCreated": "2026-06-02",
-    "dateUpdated": "2026-06-06",
+    "dateUpdated": "2026-06-13",
     "description": "Explore the heart of Africa with facts about Zambia's natural wonders, history, and traditions.",
     "flashcards": [
         {
             "id": 1,
-            "question": "When is Zambia's Independence Day and who was the colonial ruler?",
-            "answer": "Zambia gained independence from the United Kingdom on October 24, 1964."
+            "question": "When did Zambia gain independence and from who?",
+            "answer": "October 24, 1964, from the United Kingdom."
         },
         {
             "id": 2,
-            "question": "What was Zambia's name before independence?",
-            "answer": "It was known as Northern Rhodesia."
+            "question": "What was Zambia called before independence?",
+            "answer": "Northern Rhodesia."
         },
         {
             "id": 3,
             "question": "What is the official language of Zambia?",
-            "answer": "English is the official language, used for business and education, alongside over 70 local languages."
+            "answer": "English. It is used alongside more than 70 local languages."
         },
         {
             "id": 4,
-            "question": "What does the orange eagle on the Zambian flag represent?",
-            "answer": "The eagle symbolizes the people's ability to rise above national problems."
+            "question": "What does the orange eagle on the flag mean?",
+            "answer": "The people's power to fly above any national problems."
         },
         {
             "id": 5,
-            "question": "Which famous waterfall is located on the border of Zambia and Zimbabwe?",
-            "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a shared national monument."
+            "question": "What famous waterfall does Zambia share with Zimbabwe?",
+            "answer": "Victoria Falls, locally called Mosi-oa-Tunya ('The Smoke That Thunders')."
         },
         {
             "id": 6,
-            "question": "What is the main export and backbone of Zambia's economy?",
-            "answer": "Copper mining is the primary industry, as Zambia is one of the world's top copper producers."
+            "question": "What shiny metal is the backbone of Zambia's economy?",
+            "answer": "Copper. Zambia is one of the top copper makers in the world."
         },
         {
             "id": 7,
             "question": "What is the capital city of Zambia?",
-            "answer": "Lusaka is the capital and largest city of Zambia."
+            "answer": "Lusaka. It is the biggest and busiest city in the country."
         },
         {
             "id": 8,
-            "question": "Which major river flows through Zambia and gives the country its name?",
-            "answer": "The Zambezi River flows through the country and is the fourth-longest river in Africa."
+            "question": "What big river gives Zambia its name?",
+            "answer": "The Zambezi River. It is the fourth-longest river in Africa."
         },
         {
             "id": 9,
             "question": "What is the Kariba Dam?",
-            "answer": "It is one of the world's largest man-made dams, located on the Zambezi River between Zambia and Zimbabwe."
+            "answer": "A massive wall built on the river to make electricity and a giant lake."
         },
         {
             "id": 10,
-            "question": "What unique walking safari tradition started in Zambia?",
-            "answer": "South Luangwa National Park is known as the birthplace of the walking safari, popularized by Norman Carr."
+            "question": "What fun safari tradition started in Zambia?",
+            "answer": "Walking safaris. Tourists walk safely on foot to see wild animals close up."
         },
         {
             "id": 11,
-            "question": "Who was the first President of Zambia and a champion of Pan-Africanism?",
-            "answer": "Kenneth Kaunda (KK). He led the nation from 1964 to 1991 and was a key supporter of liberation movements in Southern Africa."
+            "question": "Who was Zambia's first president?",
+            "answer": "Kenneth Kaunda. He led the country for 27 years."
         },
         {
             "id": 12,
-            "question": "What does the slogan 'One Zambia, One Nation' represent?",
-            "answer": "It was Kenneth Kaunda's unifying motto aimed at fostering national identity and unity among Zambia's 72 ethnic groups."
+            "question": "What does 'One Zambia, One Nation' mean?",
+            "answer": "A famous motto used to unite all 72 different tribes as one family."
         },
         {
             "id": 13,
-            "question": "What do the red and black stripes on the Zambian flag symbolize?",
-            "answer": "Red represents the struggle for freedom and black represents the Zambian people."
+            "question": "What do red and black mean on the flag?",
+            "answer": "The fight for freedom (red) and the Zambian people (black)."
         },
         {
             "id": 14,
-            "question": "What is the historical significance of the Mulungushi Rock of Authority?",
-            "answer": "It is a natural landmark in Kabwe used as a venue for major political gatherings and is considered the birthplace of Zambian independence."
+            "question": "What is the Mulungushi Rock of Authority?",
+            "answer": "A giant natural rock where leaders met to plan the country's freedom."
         },
         {
             "id": 15,
-            "question": "How did Zambia support its neighbors during their liberation struggles?",
-            "answer": "Zambia served as a safe haven and operational base for movements like the ANC (South Africa), SWAPO (Namibia), and ZAPU/ZANU (Zimbabwe)."
+            "question": "How did Zambia help its neighbors get freedom?",
+            "answer": "It gave freedom fighters from other countries a safe place to live and plan."
+        },
+        {
+            "id": 16,
+            "question": "What is the name of Zambia's currency?",
+            "answer": "The Zambian Kwacha. The word means 'dawn' or a new beginning."
+        },
+        {
+            "id": 17,
+            "question": "What is Zambia's national dish?",
+            "answer": "Nshima. A thick, white corn mash eaten with meats and vegetables."
+        },
+        {
+            "id": 18,
+            "question": "What giant lake does Zambia share with three other countries?",
+            "answer": "Lake Tanganyika. It is the longest freshwater lake in the world."
+        },
+        {
+            "id": 19,
+            "question": "What is the famous bridge that crosses the canyon near Victoria Falls?",
+            "answer": "Victoria Falls Bridge. People jump off it for a scary bungee cords thrill."
+        },
+        {
+            "id": 20,
+            "question": "What animal is the national bird of Zambia?",
+            "answer": "The African Fish Eagle. It is the same bird shown on the national flag."
+        },
+        {
+            "id": 21,
+            "question": "What does the green color on the flag stand for?",
+            "answer": "The country's rich forests, farms, and beautiful green nature."
+        },
+        {
+            "id": 22,
+            "question": "What traditional ceremony features a king moving down a river?",
+            "answer": "Kuomboka. The Lozi king travels in a large black-and-white striped boat."
+        },
+        {
+            "id": 23,
+            "question": "What unique, dangerous pool sits right at the edge of Victoria Falls?",
+            "answer": "Devil's Pool. Swimmers can safely look over the edge during dry seasons."
+        },
+        {
+            "id": 24,
+            "question": "Which national park is famous for massive fruit bat migrations?",
+            "answer": "Kasanka National Park. Millions of bats arrive at the same time every year."
+        },
+        {
+            "id": 25,
+            "question": "What is the name of the special lake found inside Zambia's borders?",
+            "answer": "Lake Bangweulu. The name means 'where the water meets the sky'."
+        },
+        {
+            "id": 26,
+            "question": "What are the local markets in Lusaka famously called?",
+            "answer": "Salaula markets. It is where people buy and sell colorful clothes."
+        },
+        {
+            "id": 27,
+            "question": "What type of traditional music and dance is famous in Zambia?",
+            "answer": "Kalindula. A fast-paced style of music played with handmade bass guitars."
+        },
+        {
+            "id": 28,
+            "question": "Is Zambia a landlocked country?",
+            "answer": "Yes. It has no ocean coast and is surrounded by eight neighbors."
+        },
+        {
+            "id": 29,
+            "question": "What explorer named Victoria Falls after a British queen?",
+            "answer": "David Livingstone. He was the first European to see the waterfalls."
+        },
+        {
+            "id": 30,
+            "question": "What large, strange bird with a shoe-shaped beak lives in Zambian swamps?",
+            "answer": "The Shoebill Stork. A giant bird that looks like a living dinosaur."
         }
     ]
 }

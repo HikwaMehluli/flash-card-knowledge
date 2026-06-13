@@ -2,88 +2,158 @@
     "topic": "Zimbabwe",
     "flashCardName": "Zimbabwe, Did you know facts?",
     "dateCreated": "2026-06-02",
-    "dateUpdated": "2026-06-11",
+    "dateUpdated": "2026-06-13",
     "description": "Deep dive into Zimbabwe's medieval stone cities, natural wonders, and rich cultural heritage.",
     "flashcards": [
         {
             "id": 1,
-            "question": "What does the Zimbabwe Bird on the national flag represent?",
-            "answer": "The Zimbabwe Bird represents the country's rich history and national identity, originating from soapstone carvings found at Great Zimbabwe."
+            "question": "What does the Zimbabwe Bird on the flag represent?",
+            "answer": "The country's history. It comes from old stone statues found at Great Zimbabwe."
         },
         {
             "id": 2,
-            "question": "Who is the most famous Zimbabwean soccer goalkeeper of all time?",
-            "answer": "Bruce Grobbelaar — a legendary goalkeeper for the Liverpool F.C., best known for his successful career in England during the 1980s and 1990s. And Zimbabwe's Shooting Star."
-          },
+            "question": "Who is Zimbabwe's most famous soccer goalkeeper?",
+            "answer": "Bruce Grobbelaar. He became a superstar playing for Liverpool in England."
+        },
         {
             "id": 3,
-            "question": "Who served as Zimbabwe's first executive president following the abolishment of the prime minister post?",
-            "answer": "Robert Gabriel Mugabe became executive president in December 31, 1987 and ruled the country for three decades until November 2017."
+            "question": "Who was Zimbabwe's first executive president?",
+            "answer": "Robert Mugabe. He led the country for 30 years starting in 1987."
         },
         {
             "id": 4,
-            "question": "Which massive medieval stone city serves as a national monument and gave Zimbabwe its modern name?",
-            "answer": "Great Zimbabwe, built between the 11th and 15th centuries by the Shona people, is a UNESCO World Heritage site from which the nation derives its name."
+            "question": "Which ancient stone city gave Zimbabwe its name?",
+            "answer": "Great Zimbabwe. It was a massive city built out of stone a long time ago."
         },
         {
             "id": 5,
-            "question": "What is the name of Zimbabwe's gold-backed currency introduced in April 2024?",
-            "answer": "Zimbabwe Gold (ZiG) is the official currency backed by physical gold reserves, precious metals, and foreign exchange currency."
+            "question": "What is Zimbabwe's gold-backed money called?",
+            "answer": "Zimbabwe Gold (ZiG). It is new money protected by real gold reserves."
         },
         {
             "id": 6,
-            "question": "What does the white triangle on the Zimbabwean national flag symbolize?",
-            "answer": "The white triangle symbolizes peace and the forward-moving trajectory of the nation following independence in 1980."
+            "question": "What does the white triangle on the flag mean?",
+            "answer": "Peace and moving forward into a bright future."
         },
         {
             "id": 7,
-            "question": "Which natural wonder, shared by Zimbabwe and Zambia, is the world's largest curtain of falling water?",
-            "answer": "Victoria Falls, locally known as Mosi-oa-Tunya ('The Smoke That Thunders'), is a major national monument and natural world wonder."
+            "question": "What is the local name for Victoria Falls?",
+            "answer": "Mosi-oa-Tunya. It means 'The Smoke That Thunders' because it is so loud."
         },
         {
             "id": 8,
-            "question": "What famous structural feat was accomplished entirely without mortar at the Great Zimbabwe ruins?",
-            "answer": "The Great Enclosure. It features massive dry-stone walls built entirely without mortar, standing up to 11 meters high."
+            "question": "How were the Great Zimbabwe walls built?",
+            "answer": "Without cement. Builders stacked the stones perfectly like giant Lego bricks."
         },
         {
             "id": 9,
-            "question": "What do the red stripes on the Zimbabwean national flag represent?",
-            "answer": "The red stripes signify the blood spilled by liberation fighters during the liberation struggle (Umvukela/Chimurenga)."
+            "question": "What do the red stripes on the flag mean?",
+            "answer": "The blood shed by heroes fighting for the country's freedom."
         },
         {
             "id": 10,
-            "question": "How many official languages does Zimbabwe recognize in its national constitution?",
-            "answer": "16 (Sixteen) official languages. It is one of the highest numbers recognized by any country’s constitution. Languages include Ndebele, English and Shona, and many other indigenous languages, reflecting the country's rich linguistic diversity and commitment to cultural inclusivity."
+            "question": "How many official languages does Zimbabwe have?",
+            "answer": "16 languages. This is one of the highest numbers in the whole world."
         },
         {
             "id": 11,
-            "question": "Who is the legendary Kalanga Chief associated with the history of the Bulilima and Mangwe regions in Zimbabwe?",
-            "answer": "Chief Hikwa. He remains a foundational figure in the identity of the Kalanga people, whose heritage spans across Southern Zimbabwe (Plumtree/Bulilima) and Northern Botswana."
+            "question": "Who is the legendary Chief of the Kalanga people?",
+            "answer": "Chief Hikwa. He is a famous historical leader in southern Zimbabwe."
         },
         {
             "id": 12,
-            "question": "In the geography of Southern Zimbabwe, which major town sits closer to the Botswana border than to Bulawayo?",
-            "answer": "Plumtree. Located in the heart of Kalanga territory, Plumtree is a vital border town situated significantly closer to Botswana than the city of Bulawayo."
+            "question": "Which border town sits close to Botswana?",
+            "answer": "Plumtree. It is a famous gateway town between the two countries."
         },
         {
             "id": 13,
-            "question": "What is the primary role of the African Union (AU) in modern continental politics?",
-            "answer": "To promote African integration and unity, seeking to resolve conflicts peacefully and driving the 'Agenda 2063' for a prosperous, self-reliant Africa."
+            "question": "Why did Zimbabwe join the African Union?",
+            "answer": "To work together with other African countries and stay strong and united."
         },
         {
             "id": 14,
-            "question": "What does the green color on the Zimbabwean flag represent?",
-            "answer": "The green color represents the country's agricultural wealth and rural areas, emphasizing the vital role that the land plays in the lives of the Zimbabwean people."
+            "question": "What does the green color on the flag mean?",
+            "answer": "The country's rich farms, green trees, and beautiful nature."
         },
         {
             "id": 15,
-            "question": "Which liberation movement, led by Joshua Nkomo, played a critical role in the struggle against colonial rule in Zimbabwe?",
-            "answer": "ZAPU (Zimbabwe African People's Union). Nkomo, known as 'Father Zimbabwe,' was a central figure in the fight for independence and national sovereignty."
+            "question": "Which freedom group did Joshua Nkomo lead?",
+            "answer": "ZAPU. Joshua Nkomo is remembered today as 'Father Zimbabwe'."
         },
         {
-            "id": 15,
-            "question": "Zimbabwe is a landlocked country in which continent?",
-            "answer": "Africa. It is located in the southern region of the African continent, bordered by South Africa, Botswana, Zambia, and Mozambique."
+            "id": 16,
+            "question": "What continent is Zimbabwe located in?",
+            "answer": "Africa. It sits right in the southern part of the continent."
+        },
+        {
+            "id": 17,
+            "question": "What is Zimbabwe's national dish?",
+            "answer": "Sadza. It is a thick porridge made from cornmeal eaten with meat and veggies."
+        },
+        {
+            "id": 18,
+            "question": "What is Zimbabwe's famous traditional thumb piano?",
+            "answer": "Mbira. It is a wooden board with metal keys that makes magical sounds."
+        },
+        {
+            "id": 19,
+            "question": "What makes Kariba Dam special?",
+            "answer": "It forms Lake Kariba, the world's largest man-made lake by volume."
+        },
+        {
+            "id": 20,
+            "question": "What unique trees with fat trunks grow in Zimbabwe?",
+            "answer": "Baobab trees. They look like they were planted upside down."
+        },
+        {
+            "id": 21,
+            "question": "What is Zimbabwe's capital city?",
+            "answer": "Harare. It is often called the Sunshine City because of its great weather."
+        },
+        {
+            "id": 22,
+            "question": "Which park is famous for huge elephant herds?",
+            "answer": "Hwange National Park. It is the biggest game reserve in Zimbabwe."
+        },
+        {
+            "id": 23,
+            "question": "What are the balancing rocks in Epworth?",
+            "answer": "Natural rock piles stacked on top of each other by nature over millions of years."
+        },
+        {
+            "id": 24,
+            "question": "What do the yellow stripes on the flag stand for?",
+            "answer": "The country's rich minerals underground, like gold."
+        },
+        {
+            "id": 25,
+            "question": "What do the black stripes on the flag stand for?",
+            "answer": "The native black people who live in the country."
+        },
+        {
+            "id": 26,
+            "question": "What is Zimbabwe's second-largest city?",
+            "answer": "Bulawayo. It is famously known as the City of Kings."
+        },
+        {
+            "id": 27,
+            "question": "What are the misty, cool mountains in eastern Zimbabwe?",
+            "answer": "The Eastern Highlands. It is full of waterfalls, tea plantations, and green hills."
+        },
+        {
+            "id": 28,
+            "question": "What famous animal artwork is found in Matobo hills?",
+            "answer": "Ancient San rock paintings drawn on cave walls thousands of years ago."
+        },
+        {
+            "id": 29,
+            "question": "What does the word 'Zimbabwe' mean?",
+            "answer": "House of Stone. It comes from the Shona words 'dzimba dza mabwe'."
+        },
+        {
+            "id": 30,
+            "question": "What is Chinhoyi Caves famous for?",
+            "answer": "A bright blue pool of water hidden inside a deep stone cave."
         }
     ]
 }
