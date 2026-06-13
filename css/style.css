@@ -1,21 +1,22 @@
 /* Color Scheme - CSS Custom Properties */
 :root {
-	--primary-color: #1e3b58;
+	--primary-color: #244d7a;
 	--secondary-color: #167cc0;
 	--background-color: #ffffff;
-	--grey-color: #f1f1f1;
+	--grey-color: #d9e1e9;
 	--text-primary: #1e3b58;
+	
 	--correct-color: #148e47;
 	--incorrect-color: #d34a3a;
-	--transition: all 0.3s ease;
+	--transition: all 0.5s ease;
 }
 
 /* Dark Mode Theme */
 body.dark-mode {
-	--primary-color: #1e3b58;
-	--secondary-color: #167cc0;
-	--background-color: #0a131d;
-	--grey-color: #2d2d2d;
+	--primary-color: #255e9a;
+	--secondary-color: #218bd2;
+	--background-color: #0e1f33;
+	--grey-color: #3f4246;
 	--text-primary: #ecf0f1;
 }
 
